@@ -25,21 +25,45 @@ struct ContentView: View {
                             
                             VStack {
                                 Spacer()
-                                Text("SU KULLANARAK DOĞAYI KİRLETMEYİN, ARITMA TESİSİNİZİ KURUN!").font(.largeTitle).fontWeight(.bold).foregroundColor(.white).frame(height: UIScreen.main.bounds.height/4.5, alignment: .top).shadow(radius: 10).multilineTextAlignment(.center)
+                                Text("SU KULLANARAK DOĞAYI KİRLETMEYİN, ARITMA TESİSİNİZİ KURUN!").font(.largeTitle).fontWeight(.regular).foregroundColor(.white).frame(height: UIScreen.main.bounds.height/4.5, alignment: .top).shadow(radius: 10).multilineTextAlignment(.center)
                             }
                         }
                         ZStack{
                             Image("tesis").resizable() //her Zstack'te resizable olursa kenara mıknatıs gibi yapışma olayı olmuyor
                             VStack {
                                 
-                                Text("ATIKSU ARITMADA EKONOMİK ÇÖZÜMLER").font(.largeTitle).fontWeight(.bold).foregroundColor(.white).frame(height: UIScreen.main.bounds.height/3, alignment: .bottom).shadow(radius: 10).multilineTextAlignment(.center)
+                                Text("ATIKSU ARITMADA EKONOMİK ÇÖZÜMLER").font(.largeTitle).fontWeight(.regular).foregroundColor(.white).frame(height: UIScreen.main.bounds.height/3, alignment: .bottom).shadow(radius: 10).multilineTextAlignment(.center)
                                     Spacer()
                             }
                         }
                         
                     }.tabViewStyle(PageTabViewStyle()).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
                     
-                    Image("sitelogo").resizable().scaledToFit().padding(70)
+                    ZStack { //düğmeler ve ortadaki logo için
+                        
+                        VStack {
+                            HStack {
+                                Image(systemName: "line.horizontal.3").padding(30)
+                                Spacer()
+                            }
+                            
+                            Spacer()
+                            
+                            HStack { //en alt satir
+                                Image(systemName: "questionmark.circle.fill").padding(30)
+                                Spacer()
+                                Image(systemName: "magnifyingglass.circle.fill").padding(30)
+                                Spacer()
+                                Image(systemName: "location.circle.fill").padding(30)
+                                Spacer()
+                                Image(systemName: "phone.circle.fill").padding(30)
+                            }
+                            
+                        }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .topLeading).foregroundColor(.white).font(.largeTitle).shadow(radius: 10)
+                        
+                        Image("sitelogo").resizable().scaledToFit().padding(70)
+                        
+                    }
                     
                 }//Zstack çıkış
             }
