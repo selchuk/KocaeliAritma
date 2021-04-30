@@ -18,15 +18,30 @@ struct ContentView: View {
         
         ScrollView{
             LazyVStack{
-                TabView(selection : self.$selectedTab){
-                    ZStack{
-                        Image("su").resizable()
-                    }
-                    ZStack{
-                        Image("tesis").resizable() //her Zstack'te resizable olursa kenara mıknatıs gibi yapışma olayı olmuyor
-                    }
+                ZStack {
+                    TabView(selection : self.$selectedTab){
+                        ZStack{
+                            Image("su").resizable()
+                            
+                            VStack {
+                                Spacer()
+                                Text("SU KULLANARAK DOĞAYI KİRLETMEYİN, ARITMA TESİSİNİZİ KURUN!").font(.largeTitle).fontWeight(.bold).foregroundColor(.white).frame(height: UIScreen.main.bounds.height/4.5, alignment: .top).shadow(radius: 10).multilineTextAlignment(.center)
+                            }
+                        }
+                        ZStack{
+                            Image("tesis").resizable() //her Zstack'te resizable olursa kenara mıknatıs gibi yapışma olayı olmuyor
+                            VStack {
+                                
+                                Text("ATIKSU ARITMADA EKONOMİK ÇÖZÜMLER").font(.largeTitle).fontWeight(.bold).foregroundColor(.white).frame(height: UIScreen.main.bounds.height/3, alignment: .bottom).shadow(radius: 10).multilineTextAlignment(.center)
+                                    Spacer()
+                            }
+                        }
+                        
+                    }.tabViewStyle(PageTabViewStyle()).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
                     
-                }.tabViewStyle(PageTabViewStyle()).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
+                    Image("sitelogo").resizable().scaledToFit().padding(70)
+                    
+                }//Zstack çıkış
             }
         }.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
