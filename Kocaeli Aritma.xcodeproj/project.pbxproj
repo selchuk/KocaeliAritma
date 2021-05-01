@@ -35,7 +35,7 @@
 /* Begin PBXFileReference section */
 		D78079A6263C45190068D27D /* Kocaeli Aritma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kocaeli Aritma.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78079A9263C45190068D27D /* Kocaeli_AritmaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kocaeli_AritmaApp.swift; sourceTree = "<group>"; };
-		D78079AB263C45190068D27D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D78079AB263C45190068D27D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		D78079AD263C451A0068D27D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D78079B0263C451A0068D27D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D78079B2263C451A0068D27D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
