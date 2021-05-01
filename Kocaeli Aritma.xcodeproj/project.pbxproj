@@ -7,12 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D721F503263DDD91005763D8 /* UIPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721F502263DDD91005763D8 /* UIPlayerView.swift */; };
+		D721F507263DE25A005763D8 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721F506263DE25A005763D8 /* PlayerView.swift */; };
 		D78079AA263C45190068D27D /* Kocaeli_AritmaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78079A9263C45190068D27D /* Kocaeli_AritmaApp.swift */; };
 		D78079AC263C45190068D27D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78079AB263C45190068D27D /* ContentView.swift */; };
 		D78079AE263C451A0068D27D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D78079AD263C451A0068D27D /* Assets.xcassets */; };
 		D78079B1263C451A0068D27D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D78079B0263C451A0068D27D /* Preview Assets.xcassets */; };
 		D78079BC263C451A0068D27D /* Kocaeli_AritmaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78079BB263C451A0068D27D /* Kocaeli_AritmaTests.swift */; };
 		D78079C7263C451A0068D27D /* Kocaeli_AritmaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78079C6263C451A0068D27D /* Kocaeli_AritmaUITests.swift */; };
+		D7AEEE9A263DEADB00B94238 /* cicek.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D721F505263DDF2B005763D8 /* cicek.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D721F502263DDD91005763D8 /* UIPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPlayerView.swift; sourceTree = "<group>"; };
+		D721F505263DDF2B005763D8 /* cicek.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cicek.mp4; sourceTree = "<group>"; };
+		D721F506263DE25A005763D8 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		D78079A6263C45190068D27D /* Kocaeli Aritma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kocaeli Aritma.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78079A9263C45190068D27D /* Kocaeli_AritmaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kocaeli_AritmaApp.swift; sourceTree = "<group>"; };
 		D78079AB263C45190068D27D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; wrapsLines = 1; };
@@ -72,10 +78,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D721F504263DDF0A005763D8 /* files */ = {
+			isa = PBXGroup;
+			children = (
+				D721F505263DDF2B005763D8 /* cicek.mp4 */,
+			);
+			path = files;
+			sourceTree = "<group>";
+		};
 		D780799D263C45190068D27D = {
 			isa = PBXGroup;
 			children = (
 				D78079A8263C45190068D27D /* Kocaeli Aritma */,
+				D721F504263DDF0A005763D8 /* files */,
 				D78079BA263C451A0068D27D /* Kocaeli AritmaTests */,
 				D78079C5263C451A0068D27D /* Kocaeli AritmaUITests */,
 				D78079A7263C45190068D27D /* Products */,
@@ -97,6 +112,8 @@
 			children = (
 				D78079A9263C45190068D27D /* Kocaeli_AritmaApp.swift */,
 				D78079AB263C45190068D27D /* ContentView.swift */,
+				D721F502263DDD91005763D8 /* UIPlayerView.swift */,
+				D721F506263DE25A005763D8 /* PlayerView.swift */,
 				D78079AD263C451A0068D27D /* Assets.xcassets */,
 				D78079B2263C451A0068D27D /* Info.plist */,
 				D78079AF263C451A0068D27D /* Preview Content */,
@@ -233,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7AEEE9A263DEADB00B94238 /* cicek.mp4 in Resources */,
 				D78079B1263C451A0068D27D /* Preview Assets.xcassets in Resources */,
 				D78079AE263C451A0068D27D /* Assets.xcassets in Resources */,
 			);
@@ -259,8 +277,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D721F503263DDD91005763D8 /* UIPlayerView.swift in Sources */,
 				D78079AC263C45190068D27D /* ContentView.swift in Sources */,
 				D78079AA263C45190068D27D /* Kocaeli_AritmaApp.swift in Sources */,
+				D721F507263DE25A005763D8 /* PlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
