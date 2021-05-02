@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D721F503263DDD91005763D8 /* UIPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721F502263DDD91005763D8 /* UIPlayerView.swift */; };
 		D721F507263DE25A005763D8 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D721F506263DE25A005763D8 /* PlayerView.swift */; };
+		D75E0596263F272400A3D137 /* EvselAtiksuAritmaTesisleriView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E0595263F272400A3D137 /* EvselAtiksuAritmaTesisleriView.swift */; };
+		D75E0599263F2E6A00A3D137 /* EndustriyelAtiksuAritmaSistemleriView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E0598263F2E6A00A3D137 /* EndustriyelAtiksuAritmaSistemleriView.swift */; };
+		D75E059B263F336100A3D137 /* AritmaTesisiEkipmanlariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75E059A263F336100A3D137 /* AritmaTesisiEkipmanlariView.swift */; };
 		D78079AA263C45190068D27D /* Kocaeli_AritmaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78079A9263C45190068D27D /* Kocaeli_AritmaApp.swift */; };
 		D78079AC263C45190068D27D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78079AB263C45190068D27D /* ContentView.swift */; };
 		D78079AE263C451A0068D27D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D78079AD263C451A0068D27D /* Assets.xcassets */; };
@@ -40,6 +43,9 @@
 		D721F502263DDD91005763D8 /* UIPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPlayerView.swift; sourceTree = "<group>"; };
 		D721F505263DDF2B005763D8 /* cicek.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cicek.mp4; sourceTree = "<group>"; };
 		D721F506263DE25A005763D8 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		D75E0595263F272400A3D137 /* EvselAtiksuAritmaTesisleriView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvselAtiksuAritmaTesisleriView.swift; sourceTree = "<group>"; };
+		D75E0598263F2E6A00A3D137 /* EndustriyelAtiksuAritmaSistemleriView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndustriyelAtiksuAritmaSistemleriView.swift; sourceTree = "<group>"; };
+		D75E059A263F336100A3D137 /* AritmaTesisiEkipmanlariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AritmaTesisiEkipmanlariView.swift; sourceTree = "<group>"; };
 		D78079A6263C45190068D27D /* Kocaeli Aritma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kocaeli Aritma.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78079A9263C45190068D27D /* Kocaeli_AritmaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kocaeli_AritmaApp.swift; sourceTree = "<group>"; };
 		D78079AB263C45190068D27D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; wrapsLines = 1; };
@@ -89,6 +95,16 @@
 			path = files;
 			sourceTree = "<group>";
 		};
+		D75E0597263F273B00A3D137 /* StaticViews */ = {
+			isa = PBXGroup;
+			children = (
+				D75E0595263F272400A3D137 /* EvselAtiksuAritmaTesisleriView.swift */,
+				D75E059A263F336100A3D137 /* AritmaTesisiEkipmanlariView.swift */,
+				D75E0598263F2E6A00A3D137 /* EndustriyelAtiksuAritmaSistemleriView.swift */,
+			);
+			path = StaticViews;
+			sourceTree = "<group>";
+		};
 		D780799D263C45190068D27D = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +133,7 @@
 				D78079AB263C45190068D27D /* ContentView.swift */,
 				D721F502263DDD91005763D8 /* UIPlayerView.swift */,
 				D721F506263DE25A005763D8 /* PlayerView.swift */,
+				D75E0597263F273B00A3D137 /* StaticViews */,
 				D78079AD263C451A0068D27D /* Assets.xcassets */,
 				D78079B2263C451A0068D27D /* Info.plist */,
 				D78079AF263C451A0068D27D /* Preview Content */,
@@ -281,10 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75E0596263F272400A3D137 /* EvselAtiksuAritmaTesisleriView.swift in Sources */,
 				D721F503263DDD91005763D8 /* UIPlayerView.swift in Sources */,
 				D78079AC263C45190068D27D /* ContentView.swift in Sources */,
 				D78079AA263C45190068D27D /* Kocaeli_AritmaApp.swift in Sources */,
 				D721F507263DE25A005763D8 /* PlayerView.swift in Sources */,
+				D75E0599263F2E6A00A3D137 /* EndustriyelAtiksuAritmaSistemleriView.swift in Sources */,
+				D75E059B263F336100A3D137 /* AritmaTesisiEkipmanlariView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
