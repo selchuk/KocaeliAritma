@@ -15,13 +15,18 @@ struct ContentView: View {
     
     
     var body: some View {
+
+        NavigationView  { //*** önemli - bunu geometryReader'ın üstüne koymazsan sorun çıkıyo
         
         GeometryReader{ g in
+            
+          
+            
             ScrollView{
                 LazyVStack{
                         
                         ZStack {
-                            TabView(selection : self.$selectedTab){
+                            TabView(/*selection : self.$selectedTab*/){
                                 ZStack{
                                     Image("anasayfa").resizable()
                                     
@@ -64,7 +69,7 @@ struct ContentView: View {
                                 
                                 
                             }.tabViewStyle(PageTabViewStyle()).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
-                         //   .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                            
                             
                             
                             ZStack { //düğmeler ve ortadaki logo için
@@ -95,20 +100,30 @@ struct ContentView: View {
                             
                         }//Zstack çıkış
                         
+                    
+                  
+                    
                         ZStack {
+                           
+                            
                             Image("su").resizable().aspectRatio(contentMode: .fill).frame(width: .infinity, height: UIScreen.main.bounds.height, alignment: .center)
                                 .clipped()
-                            
+                           
                             VStack {
                                  Spacer()
                                 Text("Arıtma").font(.custom("Foral Pro", size: g.size.width/8, relativeTo: .headline)).foregroundColor(.white).frame(height: UIScreen.main.bounds.height/2, alignment: .bottom).multilineTextAlignment(.center)
                                     .shadow(color: .black, radius: 1, x: 1, y: 1)
                                     .padding(10)
-                                Text("DAHA FAZLA BİLGİ ").font(.custom("Avenir Next", size: g.size.width/20, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
-                               //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
-                                    .frame(width: g.size.width*0.6, height: g.size.width/10, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                    .border(Color.white, width: 0.3)
-                                Spacer()
+                                    NavigationLink(destination: AritmaView()) {
+                                        Text("DAHA FAZLA BİLGİ ").font(.custom("Avenir Next", size: g.size.width/20, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
+                                       //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
+                                            .frame(width: g.size.width*0.6, height: g.size.width/10, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                            .border(Color.white, width: 0.3)
+                                    }
+                                    
+                                    Spacer()
+
+                                }
                             }
                         }
                         
@@ -149,11 +164,26 @@ struct ContentView: View {
                     
                     //dikey tabview cikisi
                     
-                }
+                }.navigationBarHidden(true)
             }.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            
         }
     }
 }
+
+struct AritmaView: View {
+    
+    var body: some View {
+        
+        Text("aritma sayfasi")
+        
+    }
+    
+    
+}
+
+
+
 
 struct ContentView_Previews_Default: PreviewProvider {
     static var previews: some View {
