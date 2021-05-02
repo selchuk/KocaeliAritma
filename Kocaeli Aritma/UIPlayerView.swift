@@ -14,6 +14,8 @@ import AVKit
 class UIVideoPlayer: UIView {
     
     var playerLayer = AVPlayerLayer()
+    var playerLooper: AVPlayerLooper!
+    var queuePlayer: AVQueuePlayer!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -23,12 +25,25 @@ class UIVideoPlayer: UIView {
         }
         
         
-        let player = AVPlayer(url: URL(fileURLWithPath: path))
-        player.isMuted = true
-        player.play()
+  //      let player = AVPlayer(url: URL(fileURLWithPath: path))
+  //      player.isMuted = true
+ //       player.play()
         
-        playerLayer.player = player
+   //     playerLayer.player = player
         playerLayer.videoGravity = AVLayerVideoGravity(rawValue: AVLayerVideoGravity.resizeAspectFill.rawValue)
+        
+        
+        let asset: AVAsset = AVAsset(url: URL(fileURLWithPath: path))
+        let playerItem = AVPlayerItem(asset: asset)
+        self.queuePlayer = AVQueuePlayer(playerItem: playerItem)
+        
+        
+        self.playerLooper = AVPlayerLooper(player: queuePlayer, templateItem: playerItem)
+        
+        playerLayer.player = queuePlayer
+        
+        queuePlayer.isMuted = true
+        queuePlayer.play()
         
         layer.addSublayer(playerLayer)
        
