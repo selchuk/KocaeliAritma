@@ -43,11 +43,24 @@ struct ContentView: View {
                                     
                                     VStack {
                                         
-                                        Text("SU KULLANARAK DOĞAYI KİRLETMEYİN, ARITMA TESİSİNİZİ KURUN!").font(.custom("Avenir Next", size: 28, relativeTo: .headline)).fontWeight(.thin).foregroundColor(.white).frame(height: g.size.height/2, alignment: .center).multilineTextAlignment(.center).shadow(color: .black, radius: 1, x: 1, y: 1)
+                                        Text("SU KULLANARAK DOĞAYI KİRLETMEYİN, ARITMA TESİSİNİZİ KURUN!").font(.custom("Avenir Next", size: 28, relativeTo: .headline)).fontWeight(.thin).foregroundColor(.white).frame(height: g.size.height/2, alignment: .center).multilineTextAlignment(.center).shadow(color: .black, radius: 1, x: 1, y: 1).padding()
                                         //Atıksu arıtmada ekonomik çözümler
                                         Spacer()
                                     }
                                 }//.overlay(Color.black.opacity(0.5))
+                                
+                          //
+                                ZStack{
+                                    Image("endustriyel2").resizable() //her Zstack'te resizable olursa kenara mıknatıs gibi yapışma olayı olmuyor
+                                    VStack {
+                                        Text("ENDÜSTRİYEL ARITMADA KESİN ÇÖZÜMLER").font(.custom("Avenir Next", size: 28, relativeTo: .headline)).fontWeight(.thin).foregroundColor(.white).frame(height: g.size.height/2.3, alignment: .center).multilineTextAlignment(.center).shadow(color: .black, radius: 1, x: 1, y: 1).padding()
+                                        //Atıksu arıtmada ekonomik çözümler
+                                        Spacer()
+                                    }
+                                }
+                                
+                                
+                                
                                 
                                 
                             }.tabViewStyle(PageTabViewStyle()).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
@@ -92,7 +105,7 @@ struct ContentView: View {
                             }
                         }
                         
-                        Image("tesis").resizable().frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
+
                     
                     
                     //dikey tabview cikisi
