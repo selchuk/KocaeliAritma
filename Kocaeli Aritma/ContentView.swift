@@ -99,13 +99,19 @@ struct ContentView: View {
                             Image("su").resizable().frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
                             
                             VStack {
-                                
-                                Text("SU KULLANARAK DOĞAYI KİRLETMEYİN, ARITMA TESİSİNİZİ KURUN!").font(.largeTitle).fontWeight(.light).foregroundColor(.gray).frame(height: UIScreen.main.bounds.height/3, alignment: .center).shadow(radius: 10).multilineTextAlignment(.center)
+                                 Spacer()
+                                Text("Arıtma").font(.custom("Foral Pro", size: g.size.width/7, relativeTo: .headline)).foregroundColor(.white).frame(height: UIScreen.main.bounds.height/2, alignment: .bottom).multilineTextAlignment(.center)
+                                    .shadow(color: .black, radius: 1, x: 1, y: 1)
+                                    .padding(10)
+                                Text("DAHA FAZLA BİLGİ ").font(.custom("Avenir Next", size: g.size.width/20, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
+                               //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
+                                    .frame(width: g.size.width*0.6, height: g.size.width/10, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                    .border(Color.white, width: 0.3)
                                 Spacer()
                             }
                         }
                         
-
+//charter    futura
                     
                     
                     //dikey tabview cikisi
