@@ -38,6 +38,7 @@
 		D78B91EF26404869007594DB /* DigerKimyasallarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91EE26404869007594DB /* DigerKimyasallarView.swift */; };
 		D78B91F1264058A9007594DB /* HakkimizdaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91F0264058A9007594DB /* HakkimizdaView.swift */; };
 		D7AEEE9A263DEADB00B94238 /* cicek.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D721F505263DDF2B005763D8 /* cicek.mp4 */; };
+		D7BB552B2640965500FC9834 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BB552A2640965500FC9834 /* MapView.swift */; };
 		D7F4F08C263ED01200E28568 /* Foral Pro.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7F4F08B263ECF9900E28568 /* Foral Pro.otf */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		D78B91EC2640449E007594DB /* SuSartlandirmaKimyasallariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuSartlandirmaKimyasallariView.swift; sourceTree = "<group>"; };
 		D78B91EE26404869007594DB /* DigerKimyasallarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigerKimyasallarView.swift; sourceTree = "<group>"; };
 		D78B91F0264058A9007594DB /* HakkimizdaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HakkimizdaView.swift; sourceTree = "<group>"; };
+		D7BB552A2640965500FC9834 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		D7F4F08B263ECF9900E28568 /* Foral Pro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Foral Pro.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -235,6 +237,7 @@
 				D78B91DC26402F8B007594DB /* AritmaView.swift */,
 				D78B91E826404051007594DB /* KimyasallarView.swift */,
 				D78B91E02640304A007594DB /* HizmetlerimizView.swift */,
+				D7BB552A2640965500FC9834 /* MapView.swift */,
 				D78B91F0264058A9007594DB /* HakkimizdaView.swift */,
 			);
 			path = "Scrollview Page Views";
@@ -378,6 +381,7 @@
 				D78B91DA264015FD007594DB /* PaketKokuGidericiView.swift in Sources */,
 				D78B91E926404051007594DB /* KimyasallarView.swift in Sources */,
 				D721F503263DDD91005763D8 /* UIPlayerView.swift in Sources */,
+				D7BB552B2640965500FC9834 /* MapView.swift in Sources */,
 				D78B91EB26404137007594DB /* AritmaKimyasallari2View.swift in Sources */,
 				D78079AC263C45190068D27D /* ContentView.swift in Sources */,
 				D78B91DD26402F8B007594DB /* AritmaView.swift in Sources */,

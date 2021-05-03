@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import MessageUI
 
 struct ContentView: View {
+    
+    @State private var showingSheet = false
     
     
     @State var selectedTab = 0
@@ -20,6 +23,166 @@ struct ContentView: View {
             GeometryReader{ g in
                 ScrollView{
                     LazyVStack{
+                        
+                        
+                        ZStack {
+                            Image("iletisim").resizable().aspectRatio(contentMode: .fill).frame(width: .infinity, height: UIScreen.main.bounds.height, alignment: .center)
+                                .clipped()
+                            
+                            VStack {
+                                Text("Bize Ulaşın").font(.custom("Foral Pro", size: g.size.width/8, relativeTo: .headline)).foregroundColor(.white).frame(height: UIScreen.main.bounds.height/5, alignment: .bottom).multilineTextAlignment(.center)
+                                    .shadow(color: .black, radius: 1, x: 1, y: 1)
+                                    .padding(3)
+                                
+                                HStack(spacing:50){
+
+                                
+                                    VStack(spacing:40){
+                                        Text("Tel : +90 850 888 0 262").font(.title2)
+                                        Text("Tel : +90 533 590 2 095").font(.title2)
+                                        Text("info@kocaeliaritma.com").font(.title2)
+                                    }
+                                    
+                                    VStack(spacing:43){//spacing text ile aynı değil ayar yapman gerekiyor
+                                        
+                                        Button(action: {
+                                            let telephone = "tel://+908508880262"
+                                            guard let url = URL(string: telephone) else { return }
+                                            UIApplication.shared.open(url)
+                                           }) {
+                                            Image(systemName: "phone").font(.title2)
+                                        }
+                                        
+                                        Button(action: {
+                                            let telephone = "tel://+905335902095"
+                                            guard let url = URL(string: telephone) else { return }
+                                            UIApplication.shared.open(url)
+                                           }) {
+                                            Image(systemName: "phone").font(.title2)
+                                        }
+                                        
+                                        Button(action: {
+                                           EmailHelper.shared.sendEmail(subject: "Lütfen bir konu yazın", body: "", to: "info@kocaeliaritma.com")
+                                         }) {
+                                            Image(systemName: "envelope").font(.title2)
+                                         }
+                                    }
+
+                                }
+
+                                HStack{//map stack
+                                    
+                                    VStack{
+                                        Text("M.Ali Paşa Mah. ")
+                                        Text("Gazi Mustafa Kemal")
+                                        Text("Bulvarı No:16/2 ")
+                                        Text("İzmit/Kocaeli")
+                                    }
+                                    VStack{/*
+                                      
+                                            NavigationLink(
+                                                destination: MapView(),
+                                                label: {
+                                                    /*@START_MENU_TOKEN@*/Text("Navigate")/*@END_MENU_TOKEN@*/
+                                                })
+                                         */
+                                   
+                                    /*
+                                        
+                                        Link(destination: URL(string: "https://goo.gl/maps/aNHSD2WLwv6ftoKP6")!) {
+                                            Image(systemName: "link.circle.fill")
+                                                .font(.largeTitle)
+                                        }
+                                         */
+                                        
+                                        VStack {
+                                                    Button(action: {
+                                                        showingSheet = true
+                                                    }) {
+                                                        Text("Navigate")
+                                                    }
+
+                                                }
+                                                .actionSheet(isPresented: $showingSheet) {
+                                                    let latitude = 45.5088
+                                                    let longitude = -73.554
+
+                                                    let appleURL = "http://maps.apple.com/?daddr=\(latitude),\(longitude)"
+                                                    let googleURL = "comgooglemaps://?daddr=\(latitude),\(longitude)&directionsmode=driving"
+                                                    let wazeURL = "waze://?ll=\(latitude),\(longitude)&navigate=false"
+
+                                                    let googleItem = ("Google Map", URL(string:googleURL)!)
+                                                    let wazeItem = ("Waze", URL(string:wazeURL)!)
+                                                    var installedNavigationApps = [("Apple Maps", URL(string:appleURL)!)]
+
+                                                    if UIApplication.shared.canOpenURL(googleItem.1) {
+                                                        installedNavigationApps.append(googleItem)
+                                                    }
+
+                                                    if UIApplication.shared.canOpenURL(wazeItem.1) {
+                                                        installedNavigationApps.append(wazeItem)
+                                                    }
+                                                    
+                                                    var buttons: [ActionSheet.Button] = []
+                                                    for app in installedNavigationApps {
+                                                        let button: ActionSheet.Button = .default(Text(app.0)) {
+                                                            UIApplication.shared.open(app.1, options: [:], completionHandler: nil)
+                                                        }
+                                                        buttons.append(button)
+                                                    }
+                                                    let cancel: ActionSheet.Button = .cancel()
+                                                    buttons.append(cancel)
+                                                    
+                                                    return ActionSheet(title: Text("Navigate"), message: Text("Select an app..."), buttons: buttons)
+                                                }
+                                        
+                                        
+                                        
+                                        
+                                       /*
+                                        
+                                        Button(action: {
+                                            
+                                            
+                                            if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+                                              UIApplication.shared.openURL(URL(string:
+                                                "comgooglemaps://?center=40.765819,-73.975866&zoom=14&views=traffic")!)
+                                            } else {
+                                              print("Can't use comgooglemaps://");
+                                            }
+
+                                         
+                                            
+                                            
+                                        }, label: {
+                                            /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+                                        })
+                                        
+                                        
+                                        */
+                        
+                                        
+                                        
+                                        
+                                    }
+                                    
+                                    
+                                    
+                                }
+                                
+                                
+                                
+                                
+                                Spacer()
+                            }
+                        }
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                         ZStack {
                             TabView(/*selection : self.$selectedTab*/){
@@ -192,23 +355,7 @@ struct ContentView: View {
                         
                         
                         
-                        ZStack {
-                            Image("iletisim").resizable().aspectRatio(contentMode: .fill).frame(width: .infinity, height: UIScreen.main.bounds.height, alignment: .center)
-                                .clipped()
-                            
-                            VStack {
-                                Text("Bize Ulaşın").font(.custom("Foral Pro", size: g.size.width/8, relativeTo: .headline)).foregroundColor(.white).frame(height: UIScreen.main.bounds.height/5, alignment: .bottom).multilineTextAlignment(.center)
-                                    .shadow(color: .black, radius: 1, x: 1, y: 1)
-                                    .padding(3)
-                                
-                                
-                                
-                                
-                                
 
-                                Spacer()
-                            }
-                        }
                         
                         
                         
@@ -237,3 +384,38 @@ struct ContentView_Previews_Default: PreviewProvider {
     }
 }
 
+
+
+class EmailHelper: NSObject, MFMailComposeViewControllerDelegate {
+    public static let shared = EmailHelper()
+    private override init() {
+        //
+    }
+    
+    func sendEmail(subject:String, body:String, to:String){
+        if !MFMailComposeViewController.canSendMail() {
+            print("No mail account found")
+            // Todo: Add a way to show banner to user about no mail app found or configured
+            // Utilities.showErrorBanner(title: "No mail account found", subtitle: "Please setup a mail account")
+            return //EXIT
+        }
+        
+        let picker = MFMailComposeViewController()
+        
+        picker.setSubject(subject)
+        picker.setMessageBody(body, isHTML: true)
+        picker.setToRecipients([to])
+        picker.mailComposeDelegate = self
+        
+        EmailHelper.getRootViewController()?.present(picker, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        EmailHelper.getRootViewController()?.dismiss(animated: true, completion: nil)
+    }
+    
+    static func getRootViewController() -> UIViewController? {
+        
+         UIApplication.shared.windows.first?.rootViewController
+    }
+}
