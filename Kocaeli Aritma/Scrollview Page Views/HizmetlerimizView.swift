@@ -52,7 +52,7 @@ struct HizmetlerimizView: View {
                     Spacer()
 
                 }
-        }.navigationBarTitle("Arıtma", displayMode: .inline)
+        }.navigationBarTitle("Hizmetlerimiz", displayMode: .inline)
         
     }
     

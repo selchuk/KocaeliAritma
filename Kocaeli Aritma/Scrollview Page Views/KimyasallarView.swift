@@ -50,7 +50,7 @@ struct KimyasallarView: View {
                     Spacer()
 
                 }
-        }.navigationBarTitle("Arıtma", displayMode: .inline)    }
+        }.navigationBarTitle("Kimyasallar", displayMode: .inline)    }
 }
 
 struct AritmaKimyasallariView_Previews: PreviewProvider {
