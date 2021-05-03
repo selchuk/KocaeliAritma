@@ -206,14 +206,14 @@ struct AritmaView: View {
                         .border(Color.white, width: 0.3)
                 }.padding(10)
                 
-                NavigationLink(destination: AritmaView()) {
+                NavigationLink(destination: AritmaTesisiEkipmanlariView()) {
                     Text("ARITMA TESİSİ EKİPMANLARI").font(.custom("Avenir Next", size: UIScreen.main.bounds.width/16, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.width/5, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .border(Color.white, width: 0.3)
                 }.padding(10)
                     
-                NavigationLink(destination: AritmaView()) {
+                NavigationLink(destination: LimanAtikKabulTesisleriView()) {
                     Text("LİMAN ATIK KABUL TESİSLERİ").font(.custom("Avenir Next", size: UIScreen.main.bounds.width/16, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.width/5, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
@@ -254,21 +254,21 @@ struct PaketAritmaSistemleriView: View {
  
  
  */
-                    NavigationLink(destination: AritmaView()) {
+                    NavigationLink(destination: PaketBiyolojikAritmaView()) {
                         Text("PAKET BİYOLOJİK ARITMA").font(.custom("Avenir Next", size: UIScreen.main.bounds.width/17, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
                        //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                             .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height/11, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                             .border(Color.white, width: 0.3)
                     }.padding(5)
                 
-                NavigationLink(destination: AritmaView()) {
+                NavigationLink(destination: PaketKimyasalAritmaView()) {
                     Text("PAKET KİMYASAL ARITMA").font(.custom("Avenir Next", size: UIScreen.main.bounds.width/17, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height/11, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .border(Color.white, width: 0.3)
                 }.padding(5)
                 
-                NavigationLink(destination: AritmaView()) {
+                NavigationLink(destination: PaketNehirSuyuAritmaView()) {
                     Text("PAKET NEHİR SUYU ARITMA").font(.custom("Avenir Next", size: UIScreen.main.bounds.width/17, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height/11, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
