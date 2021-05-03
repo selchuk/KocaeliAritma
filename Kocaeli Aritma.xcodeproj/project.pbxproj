@@ -26,6 +26,12 @@
 		D78B91D626400E98007594DB /* PaketFiltrasyonUniteleriView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91D526400E98007594DB /* PaketFiltrasyonUniteleriView.swift */; };
 		D78B91D82640126F007594DB /* PaketOsmozUniteleriView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91D72640126F007594DB /* PaketOsmozUniteleriView.swift */; };
 		D78B91DA264015FD007594DB /* PaketKokuGidericiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91D9264015FD007594DB /* PaketKokuGidericiView.swift */; };
+		D78B91DD26402F8B007594DB /* AritmaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91DC26402F8B007594DB /* AritmaView.swift */; };
+		D78B91DF26402FE3007594DB /* PaketAritmaSistemleriView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91DE26402FE3007594DB /* PaketAritmaSistemleriView.swift */; };
+		D78B91E12640304A007594DB /* HizmetlerimizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91E02640304A007594DB /* HizmetlerimizView.swift */; };
+		D78B91E326403187007594DB /* ProjelendirmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91E226403187007594DB /* ProjelendirmeView.swift */; };
+		D78B91E5264033C4007594DB /* LaboratuvarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91E4264033C4007594DB /* LaboratuvarView.swift */; };
+		D78B91E726403547007594DB /* ServisBakimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91E626403547007594DB /* ServisBakimView.swift */; };
 		D7AEEE9A263DEADB00B94238 /* cicek.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D721F505263DDF2B005763D8 /* cicek.mp4 */; };
 		D7F4F08C263ED01200E28568 /* Foral Pro.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7F4F08B263ECF9900E28568 /* Foral Pro.otf */; };
 /* End PBXBuildFile section */
@@ -74,6 +80,12 @@
 		D78B91D526400E98007594DB /* PaketFiltrasyonUniteleriView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaketFiltrasyonUniteleriView.swift; sourceTree = "<group>"; };
 		D78B91D72640126F007594DB /* PaketOsmozUniteleriView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaketOsmozUniteleriView.swift; sourceTree = "<group>"; };
 		D78B91D9264015FD007594DB /* PaketKokuGidericiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaketKokuGidericiView.swift; sourceTree = "<group>"; };
+		D78B91DC26402F8B007594DB /* AritmaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AritmaView.swift; sourceTree = "<group>"; };
+		D78B91DE26402FE3007594DB /* PaketAritmaSistemleriView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaketAritmaSistemleriView.swift; sourceTree = "<group>"; };
+		D78B91E02640304A007594DB /* HizmetlerimizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HizmetlerimizView.swift; sourceTree = "<group>"; };
+		D78B91E226403187007594DB /* ProjelendirmeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjelendirmeView.swift; sourceTree = "<group>"; };
+		D78B91E4264033C4007594DB /* LaboratuvarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaboratuvarView.swift; sourceTree = "<group>"; };
+		D78B91E626403547007594DB /* ServisBakimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServisBakimView.swift; sourceTree = "<group>"; };
 		D7F4F08B263ECF9900E28568 /* Foral Pro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Foral Pro.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +127,10 @@
 			isa = PBXGroup;
 			children = (
 				D75E0595263F272400A3D137 /* EvselAtiksuAritmaTesisleriView.swift */,
+				D78B91DE26402FE3007594DB /* PaketAritmaSistemleriView.swift */,
+				D78B91E626403547007594DB /* ServisBakimView.swift */,
+				D78B91E4264033C4007594DB /* LaboratuvarView.swift */,
+				D78B91E226403187007594DB /* ProjelendirmeView.swift */,
 				D75E059A263F336100A3D137 /* AritmaTesisiEkipmanlariView.swift */,
 				D78B91CA263FFC2D007594DB /* LimanAtikKabulTesisleriView.swift */,
 				D75E0598263F2E6A00A3D137 /* EndustriyelAtiksuAritmaSistemleriView.swift */,
@@ -151,6 +167,7 @@
 				D78079AB263C45190068D27D /* ContentView.swift */,
 				D721F502263DDD91005763D8 /* UIPlayerView.swift */,
 				D721F506263DE25A005763D8 /* PlayerView.swift */,
+				D78B91DB26402F6B007594DB /* Scrollview Page Views */,
 				D75E0597263F273B00A3D137 /* StaticViews */,
 				D78079AD263C451A0068D27D /* Assets.xcassets */,
 				D78079B2263C451A0068D27D /* Info.plist */,
@@ -197,6 +214,15 @@
 				D78B91CF26400429007594DB /* PaketKimyasalAritmaView.swift */,
 			);
 			path = PaketAritmaSubViews;
+			sourceTree = "<group>";
+		};
+		D78B91DB26402F6B007594DB /* Scrollview Page Views */ = {
+			isa = PBXGroup;
+			children = (
+				D78B91DC26402F8B007594DB /* AritmaView.swift */,
+				D78B91E02640304A007594DB /* HizmetlerimizView.swift */,
+			);
+			path = "Scrollview Page Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,20 +356,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D78B91E12640304A007594DB /* HizmetlerimizView.swift in Sources */,
 				D75E0596263F272400A3D137 /* EvselAtiksuAritmaTesisleriView.swift in Sources */,
 				D78B91DA264015FD007594DB /* PaketKokuGidericiView.swift in Sources */,
 				D721F503263DDD91005763D8 /* UIPlayerView.swift in Sources */,
 				D78079AC263C45190068D27D /* ContentView.swift in Sources */,
+				D78B91DD26402F8B007594DB /* AritmaView.swift in Sources */,
 				D78B91D82640126F007594DB /* PaketOsmozUniteleriView.swift in Sources */,
 				D78B91D426400BD4007594DB /* PaketYagAyiriciView.swift in Sources */,
 				D78B91D026400429007594DB /* PaketKimyasalAritmaView.swift in Sources */,
+				D78B91E726403547007594DB /* ServisBakimView.swift in Sources */,
 				D78079AA263C45190068D27D /* Kocaeli_AritmaApp.swift in Sources */,
 				D78B91CB263FFC2D007594DB /* LimanAtikKabulTesisleriView.swift in Sources */,
 				D78B91CE263FFF18007594DB /* PaketBiyolojikAritmaView.swift in Sources */,
 				D721F507263DE25A005763D8 /* PlayerView.swift in Sources */,
 				D75E0599263F2E6A00A3D137 /* EndustriyelAtiksuAritmaSistemleriView.swift in Sources */,
+				D78B91E5264033C4007594DB /* LaboratuvarView.swift in Sources */,
+				D78B91DF26402FE3007594DB /* PaketAritmaSistemleriView.swift in Sources */,
 				D75E059B263F336100A3D137 /* AritmaTesisiEkipmanlariView.swift in Sources */,
 				D78B91D226400590007594DB /* PaketNehirSuyuAritmaView.swift in Sources */,
+				D78B91E326403187007594DB /* ProjelendirmeView.swift in Sources */,
 				D78B91D626400E98007594DB /* PaketFiltrasyonUniteleriView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
