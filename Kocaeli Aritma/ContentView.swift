@@ -275,28 +275,28 @@ struct PaketAritmaSistemleriView: View {
                         .border(Color.white, width: 0.3)
                 }.padding(5)
                 
-                NavigationLink(destination: AritmaView()) {
+                NavigationLink(destination: PaketYagAyiriciView()) {
                     Text("PAKET YAĞ AYIRICI").font(.custom("Avenir Next", size: UIScreen.main.bounds.width/17, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height/11, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .border(Color.white, width: 0.3)
                 }.padding(5)
                     
-                NavigationLink(destination: AritmaView()) {
+                NavigationLink(destination: PaketFiltrasyonUniteleriView()) {
                     Text("PAKET FİLTRASYON ÜNİTELERİ").font(.custom("Avenir Next", size: UIScreen.main.bounds.width/17, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height/11, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .border(Color.white, width: 0.3)
                 }.padding(5)
                 
-                NavigationLink(destination: AritmaView()) {
+                NavigationLink(destination: PaketOsmozUniteleriView()) {
                     Text("PAKET OSMOZ ÜNİTELERİ").font(.custom("Avenir Next", size: UIScreen.main.bounds.width/17, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height/11, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .border(Color.white, width: 0.3)
                 }.padding(5)
                 
-                NavigationLink(destination: AritmaView()) {
+                NavigationLink(destination: PaketKokuGidericiView()) {
                     Text("PAKET KOKU GİDERİCİ").font(.custom("Avenir Next", size: UIScreen.main.bounds.width/17, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height/11, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)

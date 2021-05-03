@@ -25,10 +25,6 @@ struct PaketNehirSuyuAritmaView: View {
                 Image("paketNehir/paketNehir3of4").resizable().scaledToFit()
                 Image("paketNehir/paketNehir4of4").resizable().scaledToFit()
 
-
-
-
-
                 
             }.padding()
         }.navigationTitle("Paket Nehir Suyu Arıtma")
