@@ -104,8 +104,8 @@ struct ContentView: View {
 
                                                 }
                                                 .actionSheet(isPresented: $showingSheet) {
-                                                    let latitude = 45.5088
-                                                    let longitude = -73.554
+                                                    let latitude = 40.767081
+                                                    let longitude = 29.9542692
 
                                                     let appleURL = "http://maps.apple.com/?daddr=\(latitude),\(longitude)"
                                                     let googleURL = "comgooglemaps://?daddr=\(latitude),\(longitude)&directionsmode=driving"
