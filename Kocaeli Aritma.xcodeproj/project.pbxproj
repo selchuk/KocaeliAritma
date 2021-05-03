@@ -32,6 +32,10 @@
 		D78B91E326403187007594DB /* ProjelendirmeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91E226403187007594DB /* ProjelendirmeView.swift */; };
 		D78B91E5264033C4007594DB /* LaboratuvarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91E4264033C4007594DB /* LaboratuvarView.swift */; };
 		D78B91E726403547007594DB /* ServisBakimView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91E626403547007594DB /* ServisBakimView.swift */; };
+		D78B91E926404051007594DB /* KimyasallarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91E826404051007594DB /* KimyasallarView.swift */; };
+		D78B91EB26404137007594DB /* AritmaKimyasallari2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91EA26404137007594DB /* AritmaKimyasallari2View.swift */; };
+		D78B91ED2640449E007594DB /* SuSartlandirmaKimyasallariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91EC2640449E007594DB /* SuSartlandirmaKimyasallariView.swift */; };
+		D78B91EF26404869007594DB /* DigerKimyasallarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91EE26404869007594DB /* DigerKimyasallarView.swift */; };
 		D7AEEE9A263DEADB00B94238 /* cicek.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D721F505263DDF2B005763D8 /* cicek.mp4 */; };
 		D7F4F08C263ED01200E28568 /* Foral Pro.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7F4F08B263ECF9900E28568 /* Foral Pro.otf */; };
 /* End PBXBuildFile section */
@@ -86,6 +90,10 @@
 		D78B91E226403187007594DB /* ProjelendirmeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjelendirmeView.swift; sourceTree = "<group>"; };
 		D78B91E4264033C4007594DB /* LaboratuvarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaboratuvarView.swift; sourceTree = "<group>"; };
 		D78B91E626403547007594DB /* ServisBakimView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServisBakimView.swift; sourceTree = "<group>"; };
+		D78B91E826404051007594DB /* KimyasallarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KimyasallarView.swift; sourceTree = "<group>"; };
+		D78B91EA26404137007594DB /* AritmaKimyasallari2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AritmaKimyasallari2View.swift; sourceTree = "<group>"; };
+		D78B91EC2640449E007594DB /* SuSartlandirmaKimyasallariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuSartlandirmaKimyasallariView.swift; sourceTree = "<group>"; };
+		D78B91EE26404869007594DB /* DigerKimyasallarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigerKimyasallarView.swift; sourceTree = "<group>"; };
 		D7F4F08B263ECF9900E28568 /* Foral Pro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Foral Pro.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,7 +137,10 @@
 				D75E0595263F272400A3D137 /* EvselAtiksuAritmaTesisleriView.swift */,
 				D78B91DE26402FE3007594DB /* PaketAritmaSistemleriView.swift */,
 				D78B91E626403547007594DB /* ServisBakimView.swift */,
+				D78B91EA26404137007594DB /* AritmaKimyasallari2View.swift */,
 				D78B91E4264033C4007594DB /* LaboratuvarView.swift */,
+				D78B91EE26404869007594DB /* DigerKimyasallarView.swift */,
+				D78B91EC2640449E007594DB /* SuSartlandirmaKimyasallariView.swift */,
 				D78B91E226403187007594DB /* ProjelendirmeView.swift */,
 				D75E059A263F336100A3D137 /* AritmaTesisiEkipmanlariView.swift */,
 				D78B91CA263FFC2D007594DB /* LimanAtikKabulTesisleriView.swift */,
@@ -220,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				D78B91DC26402F8B007594DB /* AritmaView.swift */,
+				D78B91E826404051007594DB /* KimyasallarView.swift */,
 				D78B91E02640304A007594DB /* HizmetlerimizView.swift */,
 			);
 			path = "Scrollview Page Views";
@@ -356,10 +368,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D78B91EF26404869007594DB /* DigerKimyasallarView.swift in Sources */,
 				D78B91E12640304A007594DB /* HizmetlerimizView.swift in Sources */,
 				D75E0596263F272400A3D137 /* EvselAtiksuAritmaTesisleriView.swift in Sources */,
 				D78B91DA264015FD007594DB /* PaketKokuGidericiView.swift in Sources */,
+				D78B91E926404051007594DB /* KimyasallarView.swift in Sources */,
 				D721F503263DDD91005763D8 /* UIPlayerView.swift in Sources */,
+				D78B91EB26404137007594DB /* AritmaKimyasallari2View.swift in Sources */,
 				D78079AC263C45190068D27D /* ContentView.swift in Sources */,
 				D78B91DD26402F8B007594DB /* AritmaView.swift in Sources */,
 				D78B91D82640126F007594DB /* PaketOsmozUniteleriView.swift in Sources */,
@@ -369,6 +384,7 @@
 				D78079AA263C45190068D27D /* Kocaeli_AritmaApp.swift in Sources */,
 				D78B91CB263FFC2D007594DB /* LimanAtikKabulTesisleriView.swift in Sources */,
 				D78B91CE263FFF18007594DB /* PaketBiyolojikAritmaView.swift in Sources */,
+				D78B91ED2640449E007594DB /* SuSartlandirmaKimyasallariView.swift in Sources */,
 				D721F507263DE25A005763D8 /* PlayerView.swift in Sources */,
 				D75E0599263F2E6A00A3D137 /* EndustriyelAtiksuAritmaSistemleriView.swift in Sources */,
 				D78B91E5264033C4007594DB /* LaboratuvarView.swift in Sources */,

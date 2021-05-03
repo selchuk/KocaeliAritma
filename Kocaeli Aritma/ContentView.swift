@@ -128,10 +128,14 @@ struct ContentView: View {
                                 Text("Kimyasallar").font(.custom("Foral Pro", size: g.size.width/8, relativeTo: .headline)).foregroundColor(.white).frame(height: UIScreen.main.bounds.height/5, alignment: .bottom).multilineTextAlignment(.center)
                                     .shadow(color: .black, radius: 1, x: 1, y: 1)
                                     .padding(3)
+                                
+                                
+                                NavigationLink(destination: KimyasallarView()) {
                                 Text("DAHA FAZLA BİLGİ ").font(.custom("Avenir Next", size: g.size.width/20, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
                                     //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                                     .frame(width: g.size.width*0.6, height: g.size.width/10, alignment: .center)
                                     .border(Color.white, width: 0.3)
+                                }
                                 Spacer()
                             }
                         }
