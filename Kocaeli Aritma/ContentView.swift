@@ -34,16 +34,10 @@ struct ContentView: View {
                                     .shadow(color: .black, radius: 1, x: 1, y: 1)
                                     .padding(3)
                                 
-                                HStack(spacing:50){
 
                                 
-                                    VStack(spacing:40){
-                                        Text("Tel : +90 850 888 0 262").font(.title2)
-                                        Text("Tel : +90 533 590 2 095").font(.title2)
-                                        Text("info@kocaeliaritma.com").font(.title2)
-                                    }
-                                    
-                                    VStack(spacing:43){//spacing text ile aynı değil ayar yapman gerekiyor
+                                HStack(spacing:40){
+                                        Text("Tel : +90 850 888 0 262").font(.title2).foregroundColor(.white)
                                         
                                         Button(action: {
                                             let telephone = "tel://+908508880262"
@@ -53,53 +47,73 @@ struct ContentView: View {
                                             Image(systemName: "phone").font(.title2)
                                         }
                                         
-                                        Button(action: {
-                                            let telephone = "tel://+905335902095"
-                                            guard let url = URL(string: telephone) else { return }
-                                            UIApplication.shared.open(url)
-                                           }) {
-                                            Image(systemName: "phone").font(.title2)
-                                        }
-                                        
-                                        Button(action: {
-                                           EmailHelper.shared.sendEmail(subject: "Lütfen bir konu yazın", body: "", to: "info@kocaeliaritma.com")
-                                         }) {
-                                            Image(systemName: "envelope").font(.title2)
-                                         }
+                                       
+                                    }.frame(width: UIScreen.main.bounds.size.width-40, height: UIScreen.main.bounds.size.height/12, alignment: .center)
+                                    .background(Color.black)
+                                    .opacity(0.6)
+                                    .cornerRadius(10.0)
+                                    .padding(6)
+                                    
+                                HStack(spacing:40){
+                                    Text("Tel : +90 533 590 2 095").font(.title2).foregroundColor(.white)
+                                    
+                                    Button(action: {
+                                        let telephone = "tel://+905335902095"
+                                        guard let url = URL(string: telephone) else { return }
+                                        UIApplication.shared.open(url)
+                                       }) {
+                                        Image(systemName: "phone").font(.title2)
                                     }
+                                    
+                                }.frame(width: UIScreen.main.bounds.size.width-40, height: UIScreen.main.bounds.size.height/12, alignment: .center)
+                                .background(Color.black)
+                                .opacity(0.6)
+                                .cornerRadius(10.0)
+                                .padding(6)
+                                
+                                
+                                HStack(spacing:40){
+                                    
+                                     Text("info@kocaeliaritma.com").font(.title2).foregroundColor(.white)
+                                    
+                                    
+                                    Button(action: {
+                                       EmailHelper.shared.sendEmail(subject: "Lütfen bir konu yazın", body: "", to: "info@kocaeliaritma.com")
+                                     }) {
+                                        Image(systemName: "envelope").font(.title2)
+                                     }
+                                    
+                                }.frame(width: UIScreen.main.bounds.size.width-40, height: UIScreen.main.bounds.size.height/12, alignment: .center)
+                                .background(Color.black)
+                                .opacity(0.6)
+                                .cornerRadius(10.0)
+                                .padding(6)
+                                
 
-                                }
 
-                                HStack{//map stack
+
+
+                                HStack(spacing:55){//map stack
                                     
                                     VStack{
-                                        Text("M.Ali Paşa Mah. ")
-                                        Text("Gazi Mustafa Kemal")
-                                        Text("Bulvarı No:16/2 ")
-                                        Text("İzmit/Kocaeli")
-                                    }
-                                    VStack{/*
-                                      
-                                            NavigationLink(
-                                                destination: MapView(),
-                                                label: {
-                                                    /*@START_MENU_TOKEN@*/Text("Navigate")/*@END_MENU_TOKEN@*/
-                                                })
-                                         */
+                                        Text("M.Ali Paşa Mah. Gazi")
+                                        Text("Mustafa Kemal Bulvarı")
+                                        Text("No:16/2 İzmit/Kocaeli")
+                                    }.font(.title2)
+                                    .foregroundColor(.white)
                                    
-                                    /*
-                                        
-                                        Link(destination: URL(string: "https://goo.gl/maps/aNHSD2WLwv6ftoKP6")!) {
-                                            Image(systemName: "link.circle.fill")
-                                                .font(.largeTitle)
-                                        }
-                                         */
+                                    
+                                    
                                         
                                         VStack {
                                                     Button(action: {
                                                         showingSheet = true
                                                     }) {
-                                                        Text("Navigate")
+                                                        VStack{
+                                                            Text("Yol")
+                                                            Text("Tarifi")
+                                                        }
+                                                        
                                                     }
 
                                                 }
@@ -151,8 +165,6 @@ struct ContentView: View {
                                               print("Can't use comgooglemaps://");
                                             }
 
-                                         
-                                            
                                             
                                         }, label: {
                                             /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
@@ -160,18 +172,43 @@ struct ContentView: View {
                                         
                                         
                                         */
-                        
-                                        
-                                        
-                                        
+
+
+                                }.frame(width: UIScreen.main.bounds.size.width-40, height: UIScreen.main.bounds.size.height/7, alignment: .center)
+                                .background(Color.black)
+                                .opacity(0.6)
+                                .cornerRadius(10.0)
+                                .padding(6)
+                                
+                                
+                                Image("sitelogo").resizable().scaledToFit().padding()
+
+                                
+                                HStack(spacing:5){
+                                    
+                                    Link(destination: URL(string: "https://goo.gl/maps/aNHSD2WLwv6ftoKP6")!) {
+                                        Image("facebook2")
+                                            .foregroundColor(.white)
+                                    }
+                                    
+                                    Link(destination: URL(string: "https://goo.gl/maps/aNHSD2WLwv6ftoKP6")!) {
+                                        Image("twitter2")
+                                            .font(.largeTitle)
                                     }
                                     
                                     
+                                    Link(destination: URL(string: "https://goo.gl/maps/aNHSD2WLwv6ftoKP6")!) {
+                                        Image("instagram2")
+                                            .foregroundColor(.white)
+                                    }
+                                    
+                                    
+                                    Link(destination: URL(string: "https://goo.gl/maps/aNHSD2WLwv6ftoKP6")!) {
+                                        Image("rss2")
+                                    }
+                                    
                                     
                                 }
-                                
-                                
-                                
                                 
                                 Spacer()
                             }
@@ -377,7 +414,7 @@ struct ContentView_Previews_Default: PreviewProvider {
         Group {
             ContentView().previewDevice("iPhone SE")
                 //        ContentView().previewDevice("iPhone 12 Pro Max")
-                .preferredColorScheme(.dark)
+         //       .preferredColorScheme(.dark)
             
         }
         
@@ -419,3 +456,22 @@ class EmailHelper: NSObject, MFMailComposeViewControllerDelegate {
          UIApplication.shared.windows.first?.rootViewController
     }
 }
+
+
+
+/*
+  
+        NavigationLink(
+            destination: MapView(),
+            label: {
+                /*@START_MENU_TOKEN@*/Text("Navigate")/*@END_MENU_TOKEN@*/
+            })
+     */
+
+/*
+    
+    Link(destination: URL(string: "https://goo.gl/maps/aNHSD2WLwv6ftoKP6")!) {
+        Image(systemName: "link.circle.fill")
+            .font(.largeTitle)
+    }
+     */
