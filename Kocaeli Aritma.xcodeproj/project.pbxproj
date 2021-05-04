@@ -37,8 +37,8 @@
 		D78B91ED2640449E007594DB /* SuSartlandirmaKimyasallariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91EC2640449E007594DB /* SuSartlandirmaKimyasallariView.swift */; };
 		D78B91EF26404869007594DB /* DigerKimyasallarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91EE26404869007594DB /* DigerKimyasallarView.swift */; };
 		D78B91F1264058A9007594DB /* HakkimizdaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D78B91F0264058A9007594DB /* HakkimizdaView.swift */; };
-		D7AEEE9A263DEADB00B94238 /* cicek.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D721F505263DDF2B005763D8 /* cicek.mp4 */; };
 		D7BB552B2640965500FC9834 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BB552A2640965500FC9834 /* MapView.swift */; };
+		D7E52DE22641ED9800D4B72D /* cicek2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D7E52DE12641ED4D00D4B72D /* cicek2.mp4 */; };
 		D7F4F08C263ED01200E28568 /* Foral Pro.otf in Resources */ = {isa = PBXBuildFile; fileRef = D7F4F08B263ECF9900E28568 /* Foral Pro.otf */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +61,6 @@
 
 /* Begin PBXFileReference section */
 		D721F502263DDD91005763D8 /* UIPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPlayerView.swift; sourceTree = "<group>"; };
-		D721F505263DDF2B005763D8 /* cicek.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cicek.mp4; sourceTree = "<group>"; };
 		D721F506263DE25A005763D8 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		D75E0595263F272400A3D137 /* EvselAtiksuAritmaTesisleriView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvselAtiksuAritmaTesisleriView.swift; sourceTree = "<group>"; };
 		D75E0598263F2E6A00A3D137 /* EndustriyelAtiksuAritmaSistemleriView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndustriyelAtiksuAritmaSistemleriView.swift; sourceTree = "<group>"; };
@@ -98,6 +97,7 @@
 		D78B91EE26404869007594DB /* DigerKimyasallarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigerKimyasallarView.swift; sourceTree = "<group>"; };
 		D78B91F0264058A9007594DB /* HakkimizdaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HakkimizdaView.swift; sourceTree = "<group>"; };
 		D7BB552A2640965500FC9834 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		D7E52DE12641ED4D00D4B72D /* cicek2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cicek2.mp4; sourceTree = "<group>"; };
 		D7F4F08B263ECF9900E28568 /* Foral Pro.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Foral Pro.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,7 +129,6 @@
 		D721F504263DDF0A005763D8 /* files */ = {
 			isa = PBXGroup;
 			children = (
-				D721F505263DDF2B005763D8 /* cicek.mp4 */,
 				D7F4F08B263ECF9900E28568 /* Foral Pro.otf */,
 			);
 			path = files;
@@ -186,6 +185,7 @@
 				D75E0597263F273B00A3D137 /* StaticViews */,
 				D78079AD263C451A0068D27D /* Assets.xcassets */,
 				D78079B2263C451A0068D27D /* Info.plist */,
+				D7E52DE12641ED4D00D4B72D /* cicek2.mp4 */,
 				D78079AF263C451A0068D27D /* Preview Content */,
 			);
 			path = "Kocaeli Aritma";
@@ -346,8 +346,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7E52DE22641ED9800D4B72D /* cicek2.mp4 in Resources */,
 				D7F4F08C263ED01200E28568 /* Foral Pro.otf in Resources */,
-				D7AEEE9A263DEADB00B94238 /* cicek.mp4 in Resources */,
 				D78079B1263C451A0068D27D /* Preview Assets.xcassets in Resources */,
 				D78079AE263C451A0068D27D /* Assets.xcassets in Resources */,
 			);

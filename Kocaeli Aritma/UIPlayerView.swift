@@ -19,7 +19,7 @@ class UIVideoPlayer: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        guard let path = Bundle.main.path(forResource: "cicek", ofType:"mp4") else {
+        guard let path = Bundle.main.path(forResource: "cicek2", ofType:"mp4") else {
             debugPrint("cicek.mp4 not found")
             return
         }

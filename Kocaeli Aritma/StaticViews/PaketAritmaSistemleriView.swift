@@ -32,6 +32,8 @@ struct PaketAritmaSistemleriView: View {
                        //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                             .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height/11, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                             .border(Color.white, width: 0.3)
+                            .background(Color.black.opacity(0.2))
+
                     }.padding(5)
                 
                 NavigationLink(destination: PaketKimyasalAritmaView()) {
@@ -39,6 +41,8 @@ struct PaketAritmaSistemleriView: View {
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height/11, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .border(Color.white, width: 0.3)
+                        .background(Color.black.opacity(0.2))
+
                 }.padding(5)
                 
                 NavigationLink(destination: PaketNehirSuyuAritmaView()) {
@@ -46,6 +50,8 @@ struct PaketAritmaSistemleriView: View {
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height/11, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .border(Color.white, width: 0.3)
+                        .background(Color.black.opacity(0.2))
+
                 }.padding(5)
                 
                 NavigationLink(destination: PaketYagAyiriciView()) {
@@ -53,6 +59,8 @@ struct PaketAritmaSistemleriView: View {
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height/11, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .border(Color.white, width: 0.3)
+                        .background(Color.black.opacity(0.2))
+
                 }.padding(5)
                     
                 NavigationLink(destination: PaketFiltrasyonUniteleriView()) {
@@ -60,6 +68,8 @@ struct PaketAritmaSistemleriView: View {
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height/11, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .border(Color.white, width: 0.3)
+                        .background(Color.black.opacity(0.2))
+
                 }.padding(5)
                 
                 NavigationLink(destination: PaketOsmozUniteleriView()) {
@@ -67,6 +77,8 @@ struct PaketAritmaSistemleriView: View {
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height/11, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .border(Color.white, width: 0.3)
+                        .background(Color.black.opacity(0.2))
+
                 }.padding(5)
                 
                 NavigationLink(destination: PaketKokuGidericiView()) {
@@ -74,6 +86,8 @@ struct PaketAritmaSistemleriView: View {
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.height/11, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         .border(Color.white, width: 0.3)
+                        .background(Color.black.opacity(0.2))
+
                 }.padding(5)
                 
                     Spacer()
