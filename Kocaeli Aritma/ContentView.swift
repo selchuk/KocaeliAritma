@@ -24,195 +24,7 @@ struct ContentView: View {
                 ScrollView{
                     LazyVStack{
                         
-                        
-                        ZStack {
-                            Image("iletisim").resizable().aspectRatio(contentMode: .fill).frame(width: .infinity, height: UIScreen.main.bounds.height, alignment: .center)
-                                .clipped()
-                            
-                            VStack {
-                                Text("Bize Ulaşın").font(.custom("Foral Pro", size: g.size.width/8, relativeTo: .headline)).foregroundColor(.white).frame(height: UIScreen.main.bounds.height/5, alignment: .bottom).multilineTextAlignment(.center)
-                                    .shadow(color: .black, radius: 1, x: 1, y: 1)
-                                    .padding(3)
-                                
 
-                                
-                                HStack(spacing:40){
-                                        Text("Tel : +90 850 888 0 262").font(.title2).foregroundColor(.white)
-                                        
-                                        Button(action: {
-                                            let telephone = "tel://+908508880262"
-                                            guard let url = URL(string: telephone) else { return }
-                                            UIApplication.shared.open(url)
-                                           }) {
-                                            Image(systemName: "phone").font(.title2)
-                                        }
-                                        
-                                       
-                                    }.frame(width: UIScreen.main.bounds.size.width-40, height: UIScreen.main.bounds.size.height/12, alignment: .center)
-                                    .background(Color.black)
-                                    .opacity(0.6)
-                                    .cornerRadius(10.0)
-                                    .padding(6)
-                                    
-                                HStack(spacing:40){
-                                    Text("Tel : +90 533 590 2 095").font(.title2).foregroundColor(.white)
-                                    
-                                    Button(action: {
-                                        let telephone = "tel://+905335902095"
-                                        guard let url = URL(string: telephone) else { return }
-                                        UIApplication.shared.open(url)
-                                       }) {
-                                        Image(systemName: "phone").font(.title2)
-                                    }
-                                    
-                                }.frame(width: UIScreen.main.bounds.size.width-40, height: UIScreen.main.bounds.size.height/12, alignment: .center)
-                                .background(Color.black)
-                                .opacity(0.6)
-                                .cornerRadius(10.0)
-                                .padding(6)
-                                
-                                
-                                HStack(spacing:40){
-                                    
-                                     Text("info@kocaeliaritma.com").font(.title2).foregroundColor(.white)
-                                    
-                                    
-                                    Button(action: {
-                                       EmailHelper.shared.sendEmail(subject: "Lütfen bir konu yazın", body: "", to: "info@kocaeliaritma.com")
-                                     }) {
-                                        Image(systemName: "envelope").font(.title2)
-                                     }
-                                    
-                                }.frame(width: UIScreen.main.bounds.size.width-40, height: UIScreen.main.bounds.size.height/12, alignment: .center)
-                                .background(Color.black)
-                                .opacity(0.6)
-                                .cornerRadius(10.0)
-                                .padding(6)
-                                
-
-
-
-
-                                HStack(spacing:55){//map stack
-                                    
-                                    VStack{
-                                        Text("M.Ali Paşa Mah. Gazi")
-                                        Text("Mustafa Kemal Bulvarı")
-                                        Text("No:16/2 İzmit/Kocaeli")
-                                    }.font(.title2)
-                                    .foregroundColor(.white)
-                                   
-                                    
-                                    
-                                        
-                                        VStack {
-                                                    Button(action: {
-                                                        showingSheet = true
-                                                    }) {
-                                                        VStack{
-                                                            Text("Yol")
-                                                            Text("Tarifi")
-                                                        }
-                                                        
-                                                    }
-
-                                                }
-                                                .actionSheet(isPresented: $showingSheet) {
-                                                    let latitude = 40.767081
-                                                    let longitude = 29.9542692
-
-                                                    let appleURL = "http://maps.apple.com/?daddr=\(latitude),\(longitude)"
-                                                    let googleURL = "comgooglemaps://?daddr=\(latitude),\(longitude)&directionsmode=driving"
-                                                    let wazeURL = "waze://?ll=\(latitude),\(longitude)&navigate=false"
-
-                                                    let googleItem = ("Google Map", URL(string:googleURL)!)
-                                                    let wazeItem = ("Waze", URL(string:wazeURL)!)
-                                                    var installedNavigationApps = [("Apple Maps", URL(string:appleURL)!)]
-
-                                                    if UIApplication.shared.canOpenURL(googleItem.1) {
-                                                        installedNavigationApps.append(googleItem)
-                                                    }
-
-                                                    if UIApplication.shared.canOpenURL(wazeItem.1) {
-                                                        installedNavigationApps.append(wazeItem)
-                                                    }
-                                                    
-                                                    var buttons: [ActionSheet.Button] = []
-                                                    for app in installedNavigationApps {
-                                                        let button: ActionSheet.Button = .default(Text(app.0)) {
-                                                            UIApplication.shared.open(app.1, options: [:], completionHandler: nil)
-                                                        }
-                                                        buttons.append(button)
-                                                    }
-                                                    let cancel: ActionSheet.Button = .cancel()
-                                                    buttons.append(cancel)
-                                                    
-                                                    return ActionSheet(title: Text("Navigate"), message: Text("Select an app..."), buttons: buttons)
-                                                }
-                                        
-                                        
-                                        
-                                        
-                                       /*
-                                        
-                                        Button(action: {
-                                            
-                                            
-                                            if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
-                                              UIApplication.shared.openURL(URL(string:
-                                                "comgooglemaps://?center=40.765819,-73.975866&zoom=14&views=traffic")!)
-                                            } else {
-                                              print("Can't use comgooglemaps://");
-                                            }
-
-                                            
-                                        }, label: {
-                                            /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
-                                        })
-                                        
-                                        
-                                        */
-
-
-                                }.frame(width: UIScreen.main.bounds.size.width-40, height: UIScreen.main.bounds.size.height/7, alignment: .center)
-                                .background(Color.black)
-                                .opacity(0.6)
-                                .cornerRadius(10.0)
-                                .padding(6)
-                                
-                                
-                                Image("sitelogo").resizable().scaledToFit().padding()
-
-                                
-                                HStack(spacing:5){
-                                    
-                                    Link(destination: URL(string: "https://goo.gl/maps/aNHSD2WLwv6ftoKP6")!) {
-                                        Image("facebook2")
-                                            .foregroundColor(.white)
-                                    }
-                                    
-                                    Link(destination: URL(string: "https://goo.gl/maps/aNHSD2WLwv6ftoKP6")!) {
-                                        Image("twitter2")
-                                            .font(.largeTitle)
-                                    }
-                                    
-                                    
-                                    Link(destination: URL(string: "https://goo.gl/maps/aNHSD2WLwv6ftoKP6")!) {
-                                        Image("instagram2")
-                                            .foregroundColor(.white)
-                                    }
-                                    
-                                    
-                                    Link(destination: URL(string: "https://goo.gl/maps/aNHSD2WLwv6ftoKP6")!) {
-                                        Image("rss2")
-                                    }
-                                    
-                                    
-                                }
-                                
-                                Spacer()
-                            }
-                        }
                         
                         
                         
@@ -392,7 +204,175 @@ struct ContentView: View {
                         
                         
                         
+                        
+                        ZStack {
+                            Image("iletisim").resizable().aspectRatio(contentMode: .fill).frame(width: .infinity, height: UIScreen.main.bounds.height, alignment: .center)
+                                .clipped()
+                            
+                            VStack {
+                                Text("Bize Ulaşın").font(.custom("Foral Pro", size: g.size.width/8, relativeTo: .headline)).foregroundColor(.white).frame(height: UIScreen.main.bounds.height/5, alignment: .bottom).multilineTextAlignment(.center)
+                                    .shadow(color: .black, radius: 1, x: 1, y: 1)
+                                    .padding(3)
+                                
 
+                                
+                                HStack{
+                                    Text("Tel : +90 850 888 0 262").font(.title2).foregroundColor(.white).padding(.leading,g.size.width/15)
+                                        Spacer()
+                                        Button(action: {
+                                            let telephone = "tel://+908508880262"
+                                            guard let url = URL(string: telephone) else { return }
+                                            UIApplication.shared.open(url)
+                                           }) {
+                                            Image(systemName: "phone").font(.title2).padding(g.size.width/15).frame(width: 45, height: .infinity, alignment: .center)
+                                        }
+                                }.frame(width: UIScreen.main.bounds.size.width*0.93, height: UIScreen.main.bounds.size.height/13, alignment: .center)
+                                    .background(Color.black.opacity(0.4))
+                                    .cornerRadius(10.0)
+                                    .padding(6)
+                                
+                                HStack{
+                                    Text("Tel : +90 533 590 2 095").font(.title2).foregroundColor(.white).padding(.leading,g.size.width/15)
+                                    Spacer()
+                                    Button(action: {
+                                        let telephone = "tel://+905335902095"
+                                        guard let url = URL(string: telephone) else { return }
+                                        UIApplication.shared.open(url)
+                                       }) {
+                                        Image(systemName: "phone").font(.title2).padding(g.size.width/15).frame(width: 45, height: .infinity, alignment: .center)
+                                    }
+                                }.frame(width: UIScreen.main.bounds.size.width*0.93, height: UIScreen.main.bounds.size.height/13, alignment: .center)
+                                .background(Color.black.opacity(0.4))
+                                .cornerRadius(10.0)
+                                .padding(6)
+                                
+                                
+                                HStack{
+                                    
+                                     Text("info@kocaeliaritma.com").font(.title2).foregroundColor(.white).padding(.leading,g.size.width/15)
+                                    
+                                    Spacer()
+
+                                    Button(action: {
+                                       EmailHelper.shared.sendEmail(subject: "Lütfen bir konu yazın", body: "", to: "info@kocaeliaritma.com")
+                                     }) {
+                                        Image(systemName: "envelope").font(.title2).padding(g.size.width/15).frame(width: 45, height: .infinity, alignment: .center)
+                                     }
+                                    
+                                }.frame(width: UIScreen.main.bounds.size.width*0.93, height: UIScreen.main.bounds.size.height/13, alignment: .center)
+                                .background(Color.black.opacity(0.4))
+                                .cornerRadius(10.0)
+                                .padding(6)
+                                
+
+
+
+
+                                HStack{//map stack
+                                    
+                                    VStack{
+                                        Text("M.Ali Paşa Mah. Gazi")
+                                        Text("Mustafa Kemal Bulvarı")
+                                        Text("No:16/2 İzmit/Kocaeli")
+                                    }.font(.title2).foregroundColor(.white).padding(.leading,g.size.width/15)
+                                   
+                                    
+                                    Spacer()
+                                        
+                                        VStack {
+                                                    Button(action: {
+                                                        showingSheet = true
+                                                    }) {
+                                                        VStack{
+                                                            Text("Yol")
+                                                            Text("Tarifi")
+                                                        }
+                                                        
+                                                    }
+
+                                        }.frame(width: 45, height: .infinity, alignment: .center)
+                                            .actionSheet(isPresented: $showingSheet) {
+                                                    let latitude = 40.767081
+                                                    let longitude = 29.9542692
+
+                                                    let appleURL = "http://maps.apple.com/?daddr=\(latitude),\(longitude)"
+                                                    let googleURL = "comgooglemaps://?daddr=\(latitude),\(longitude)&directionsmode=driving"
+                                                    let wazeURL = "waze://?ll=\(latitude),\(longitude)&navigate=false"
+
+                                                    let googleItem = ("Google Map", URL(string:googleURL)!)
+                                                    let wazeItem = ("Waze", URL(string:wazeURL)!)
+                                                    var installedNavigationApps = [("Apple Maps", URL(string:appleURL)!)]
+
+                                                    if UIApplication.shared.canOpenURL(googleItem.1) {
+                                                        installedNavigationApps.append(googleItem)
+                                                    }
+
+                                                    if UIApplication.shared.canOpenURL(wazeItem.1) {
+                                                        installedNavigationApps.append(wazeItem)
+                                                    }
+                                                    
+                                                    var buttons: [ActionSheet.Button] = []
+                                                    for app in installedNavigationApps {
+                                                        let button: ActionSheet.Button = .default(Text(app.0)) {
+                                                            UIApplication.shared.open(app.1, options: [:], completionHandler: nil)
+                                                        }
+                                                        buttons.append(button)
+                                                    }
+                                                    let cancel: ActionSheet.Button = .cancel()
+                                                    buttons.append(cancel)
+                                                    
+                                                    return ActionSheet(title: Text("Yol Tarifi"), message: Text("Bir uygulama seçin:"), buttons: buttons)
+                                                }
+
+
+                                }.frame(width: UIScreen.main.bounds.size.width*0.93, height: UIScreen.main.bounds.size.height/7, alignment: .center)
+                                .background(Color.black.opacity(0.4))
+                                .cornerRadius(10.0)
+                                
+                               
+                                
+                                
+                                
+                                
+                                /*.frame(width: UIScreen.main.bounds.size.width-40, height: UIScreen.main.bounds.size.height/7, alignment: .center)
+                                .background(Color.black.opacity(0.3))
+                                .cornerRadius(10.0)
+                                .padding(6)
+                                */
+                                Spacer()
+                                
+                                Image("sitelogo").resizable().scaledToFit().frame(width: g.size.width-50, height: g.size.height/10, alignment: .center)
+
+                                
+                                HStack(spacing:30){
+                                    
+                                    Link(destination: URL(string: "https://www.facebook.com/KocaeliAritma/")!) {
+                                        Image("facebook2").resizable()
+                                            .foregroundColor(.white).frame(width: g.size.width/8, height: g.size.width/8, alignment: .center)
+                                    }
+                                    
+                                    Link(destination: URL(string: "https://twitter.com/kocaeliaritma")!) {
+                                        Image("twitter2").resizable()
+                                            .foregroundColor(.white).frame(width: g.size.width/8, height: g.size.width/8, alignment: .center)
+                                    }
+                                    
+                                    
+                                    Link(destination: URL(string: "https://www.instagram.com/kocaeliaritma/")!) {
+                                        Image("instagram2").resizable()
+                                            .foregroundColor(.white).frame(width: g.size.width/8, height: g.size.width/8, alignment: .center)
+                                    }
+                                    
+                                    
+                                    Link(destination: URL(string: "https://www.kocaeliaritma.com/feed/")!) {
+                                        Image("rss2").resizable()
+                                            .foregroundColor(.white).frame(width: g.size.width/8, height: g.size.width/8, alignment: .center)
+                                    }
+                                    
+                                    
+                                }.padding()
+                                
+                            }
+                        }
                         
                         
                         
@@ -413,7 +393,7 @@ struct ContentView_Previews_Default: PreviewProvider {
         
         Group {
             ContentView().previewDevice("iPhone SE")
-                //        ContentView().previewDevice("iPhone 12 Pro Max")
+        //    ContentView().previewDevice("iPhone 12 Pro Max")
          //       .preferredColorScheme(.dark)
             
         }
@@ -475,3 +455,24 @@ class EmailHelper: NSObject, MFMailComposeViewControllerDelegate {
             .font(.largeTitle)
     }
      */
+
+
+/*
+
+Button(action: {
+    
+    
+    if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+      UIApplication.shared.openURL(URL(string:
+        "comgooglemaps://?center=40.765819,-73.975866&zoom=14&views=traffic")!)
+    } else {
+      print("Can't use comgooglemaps://");
+    }
+
+    
+}, label: {
+    /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+})
+
+
+*/
