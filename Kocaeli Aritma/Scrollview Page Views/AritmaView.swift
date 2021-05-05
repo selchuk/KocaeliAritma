@@ -31,7 +31,7 @@ struct AritmaView: View {
                         Text("PAKET ARITMA SİSTEMLERİ").font(.custom("Avenir Next", size: UIScreen.main.bounds.width/16, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
                        //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                             .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.width/5, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .border(Color.white, width: 0.3)
+                     //       .border(Color.white, width: 0.3)
                             .background(Color.black.opacity(0.2))
 
                     }.padding(10)
@@ -40,7 +40,7 @@ struct AritmaView: View {
                     Text("EVSEL ATIKSU ARITMA SİSTEMLERİ").font(.custom("Avenir Next", size: UIScreen.main.bounds.width/16, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.width/5, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .border(Color.white, width: 0.3)
+                     //   .border(Color.white, width: 0.3)
                         .background(Color.black.opacity(0.2))
 
                 }.padding(10)
@@ -49,7 +49,7 @@ struct AritmaView: View {
                     Text("ENDÜSTRİYEL ATIKSU ARITMA SİSTEMLERİ").font(.custom("Avenir Next", size: UIScreen.main.bounds.width/16, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.width/5, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .border(Color.white, width: 0.3)
+                   //     .border(Color.white, width: 0.3)
                         .background(Color.black.opacity(0.2))
 
                 }.padding(10)
@@ -58,7 +58,7 @@ struct AritmaView: View {
                     Text("ARITMA TESİSİ EKİPMANLARI").font(.custom("Avenir Next", size: UIScreen.main.bounds.width/16, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.width/5, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .border(Color.white, width: 0.3)
+                  //      .border(Color.white, width: 0.3)
                         .background(Color.black.opacity(0.2))
 
                 }.padding(10)
@@ -67,7 +67,7 @@ struct AritmaView: View {
                     Text("LİMAN ATIK KABUL TESİSLERİ").font(.custom("Avenir Next", size: UIScreen.main.bounds.width/16, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.width/5, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .border(Color.white, width: 0.3)
+                     //   .border(Color.white, width: 0.3)
                         .background(Color.black.opacity(0.2))
 
                 }.padding(10)

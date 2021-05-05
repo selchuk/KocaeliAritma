@@ -12,7 +12,7 @@ struct ContentView: View {
     
     @State private var showingSheet = false
     
-    @State var showMenu = false
+    @State public var showMenu = false
     
     @State var selectedTab = 0
     @State var seciliTabZorla = 0
@@ -89,7 +89,7 @@ struct ContentView: View {
                                                 self.showMenu.toggle()
                                             }) {
                                                 Image(systemName:self.showMenu ?  "xmark": "line.horizontal.3").padding( g.size.width/12).foregroundColor(self.showMenu ? .blue : .white)
-                                            }.frame(width: g.size.width, height: 50, alignment: self.showMenu ? .trailing : .leading).padding(.top,20)
+                                            }.frame(width: g.size.width, height: 50, alignment: .leading).padding(.top,20)
                                             
                                         }
                                         
@@ -389,7 +389,7 @@ struct ContentView: View {
                                                            
                             Spacer()
                         }
-                    }
+                    }.background(Color.black.opacity(self.showMenu ? 0.5  : 0).animation(.easeIn)).edgesIgnoringSafeArea(.all)
                     
                 }.actionSheet(isPresented: $showingSheet) {
                     let latitude = 40.767081
@@ -447,9 +447,24 @@ struct ContentView_Previews_Default: PreviewProvider {
 
 
 struct Menu: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         
+        
+        
         VStack(spacing:25){
+            
+            HStack {
+                Image("sitelogo").resizable().aspectRatio(contentMode: .fit)
+                Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    Image(systemName: "xmark")
+                })
+            }
+            
             
             NavigationLink(
                 destination: HakkimizdaView(),
@@ -476,9 +491,9 @@ struct Menu: View {
                 Text("Felan")
             })
             Spacer()
-        }.padding(35)
-        .frame(width: UIScreen.main.bounds.width*0.6, height: .infinity, alignment: .leading)
-        .background(Color("Renkk").edgesIgnoringSafeArea(.bottom))
+        }.padding(15)
+        .frame(width: UIScreen.main.bounds.width*0.8, height: .infinity, alignment: .leading)
+        .background(Color("Renkk").edgesIgnoringSafeArea(.all))
         
     }
 }

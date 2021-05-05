@@ -31,7 +31,7 @@ struct HizmetlerimizView: View {
                         Text("PROJELENDİRME").font(.custom("Avenir Next", size: UIScreen.main.bounds.width/16, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
                        //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                             .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.width/5, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                            .border(Color.white, width: 0.3)
+                        //    .border(Color.white, width: 0.3)
                             .background(Color.black.opacity(0.4))
 
                     }.padding(10)
@@ -40,7 +40,7 @@ struct HizmetlerimizView: View {
                     Text("LABORATUVAR HİZMETLERİ").font(.custom("Avenir Next", size: UIScreen.main.bounds.width/16, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.width/5, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .border(Color.white, width: 0.3)
+                    //    .border(Color.white, width: 0.3)
                         .background(Color.black.opacity(0.4))
 
                 }.padding(10)
@@ -49,7 +49,7 @@ struct HizmetlerimizView: View {
                     Text("SERVİS & BAKIM").font(.custom("Avenir Next", size: UIScreen.main.bounds.width/16, relativeTo: .headline)).fontWeight(.light).foregroundColor(.white).multilineTextAlignment(.center)
                    //     .shadow(color: /*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/, radius: 1, x: 1, y: 1)
                         .frame(width: UIScreen.main.bounds.width*0.9, height: UIScreen.main.bounds.width/5, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                        .border(Color.white, width: 0.3)
+                     //   .border(Color.white, width: 0.3)
                         .background(Color.black.opacity(0.4))
 
                 }.padding(10)
