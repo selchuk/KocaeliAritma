@@ -12,7 +12,7 @@ import MessageUI
 struct MainView : View {
     
     @Binding var show : Bool
-    @Binding var index : String
+  
     
     
     
@@ -28,7 +28,6 @@ struct MainView : View {
     
     var body: some View {
         
-        NavigationView {
             
             GeometryReader{ g in
                 
@@ -388,6 +387,7 @@ struct MainView : View {
                             
                         }
                     }.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    .navigationBarHidden(true) //bunu buraya koyunca üst tarafa clip etkisi gitti
                     
                     
          /*           GeometryReader { gg in
@@ -403,7 +403,8 @@ struct MainView : View {
                     }.background(Color.black.opacity(self.showMenu ? 0.5  : 0).animation(.easeIn)).edgesIgnoringSafeArea(.all)
       */
                     
-                }.actionSheet(isPresented: $showingSheet) {
+                }
+                .actionSheet(isPresented: $showingSheet) {
                     let latitude = 40.767081
                     let longitude = 29.9542692
 
@@ -434,10 +435,11 @@ struct MainView : View {
                     buttons.append(cancel)
                     
                     return ActionSheet(title: Text("Yol Tarifi"), message: Text("Bir uygulama seçin:"), buttons: buttons)
+                    
                 }
                 
-            }.navigationBarHidden(true)
-        }
+            }
+        
         
     }
 }
@@ -446,42 +448,118 @@ struct MainView : View {
 
 struct ContentView: View {
     
-    @State var index = "Home"
+    @State var index = 2
     @State var show = false
+    
+
     
     
     var body: some View {
         
-        ZStack{
+        NavigationView {
             
-            (self.show ? Color.black.opacity(0.05) : Color.clear).edgesIgnoringSafeArea(.all)
-            
-            ZStack(alignment: .leading) {
+            ZStack{
                 
-                VStack(alignment : .leading,spacing: 25){
+                (self.show ? Color.black.opacity(0.05) : Color.clear).edgesIgnoringSafeArea(.all)
+                
+                ZStack(alignment: .leading) {
                     
-                    HStack(spacing: 15){
+                    VStack(alignment : .leading,spacing: 25){
                         
-                        Image("pic")
-                        .resizable()
-                        .frame(width: 65, height: 65)
-                        
-                        VStack(alignment: .leading, spacing: 12) {
+                        HStack(spacing: 15){
                             
-                            Text("Catherine")
-                                .fontWeight(.bold)
+                            Image("pic")
+                            .resizable()
+                            .frame(width: 65, height: 65)
                             
-                            Text("New York , US")
+                            VStack(alignment: .leading, spacing: 12) {
+                                
+                                Text("Catherine")
+                                    .fontWeight(.bold)
+                                
+                                Text("New York , US")
+                            }
                         }
-                    }
-                    .padding(.bottom, 50)
+                        .padding(.bottom, 50)
 
+                        
+                        HStack{
+                            
+                            Capsule()
+                                .fill(self.index == 1 ?  Color.orange : Color.white)
+                            .frame(width: 5, height: 30)
+                            
+                            NavigationLink(
+                                destination: AritmaView(),
+                                label: {
+                                    Text("Arıtma")
+                                }).simultaneousGesture(TapGesture().onEnded{
+                                    self.index = 1
+                                })
+                        }
+                        HStack{
+                            
+                            Capsule()
+                                .fill(self.index == 2 ?  Color.orange : Color.white)
+                            .frame(width: 5, height: 30)
+                            
+                            NavigationLink(
+                                destination: KimyasallarView(),
+                                label: {
+                                    Text("Kimyasallar")
+                                }).simultaneousGesture(TapGesture().onEnded{
+                                    self.index = 2
+                                })
+                        }
+                        HStack{
+                            
+                            Capsule()
+                                .fill(self.index == 3 ?  Color.orange : Color.white)
+                            .frame(width: 5, height: 30)
+                            
+                            NavigationLink(
+                                destination: HizmetlerimizView(),
+                                label: {
+                                    Text("Hizmetlerimiz")
+                                }).simultaneousGesture(TapGesture().onEnded{
+                                    self.index = 3
+                                })
+                        }
+                        HStack{
+                            
+                            Capsule()
+                                .fill(self.index == 4 ?  Color.orange : Color.white)
+                            .frame(width: 5, height: 30)
+                            
+                            NavigationLink(
+                                destination: HakkimizdaView(),
+                                label: {
+                                    Text("Hakkımızda")
+                                }).simultaneousGesture(TapGesture().onEnded{
+                                    self.index = 4
+                                })
+                            
+                            
+                        }
                     
-                    ForEach(data,id: \.self){i in
+                        
+                      
+                        
+                        Spacer()
+                    }.padding(.leading)
+                    .padding(.top)
+                    .scaleEffect(self.show ? 1 : 0.01)
+                    
+                    ZStack(alignment: .topTrailing) {
+                        
+                        MainView(show: self.$show)
+                 //       .scaleEffect(self.show ? 0.8 : 1)
+                            .offset(x: self.show ? UIScreen.main.bounds.width*0.5 : 0,y : self.show ? UIScreen.main.bounds.height*0.2 : 0)
+                        .disabled(self.show ? true : false)
+                        
+
                         
                         Button(action: {
-                            
-                            self.index = i
                             
                             withAnimation(.spring()){
                                 
@@ -490,51 +568,22 @@ struct ContentView: View {
                             
                         }) {
                             
-                            HStack{
-                                
-                                Capsule()
-                                .fill(self.index == i ? Color.orange : Color.clear)
-                                .frame(width: 5, height: 30)
-                                
-                                Text(i)
-                                    .padding(.leading)
-                                    .foregroundColor(.black)
-                                
-                            }
-                        }
+                            Image(systemName: "xmark")
+                            .resizable()
+                            .frame(width: 15, height: 15)
+                            .foregroundColor(.black)
+                            
+                        }.padding()
+                        .opacity(self.show ? 1 : 0)
                     }
-                    
-                    Spacer()
-                }.padding(.leading)
-                .padding(.top)
-                .scaleEffect(self.show ? 1 : 0)
-                
-                ZStack(alignment: .topTrailing) {
-                    
-                    MainView(show: self.$show,index: self.$index)
-             //       .scaleEffect(self.show ? 0.8 : 1)
-                        .offset(x: self.show ? UIScreen.main.bounds.width*0.5 : 0,y : self.show ? UIScreen.main.bounds.height*0.2 : 0)
-                    .disabled(self.show ? true : false)
-                    
-                    
-                    Button(action: {
-                        
+                    .onTapGesture {
                         withAnimation(.spring()){
                             
                             self.show.toggle()
                         }
-                        
-                    }) {
-                        
-                        Image(systemName: "xmark")
-                        .resizable()
-                        .frame(width: 15, height: 15)
-                        .foregroundColor(.black)
-                        
-                    }.padding()
-                    .opacity(self.show ? 1 : 0)
-                }
-                
+            }
+                    
+                }.navigationBarHidden(true)
             }
         }
         
@@ -553,11 +602,10 @@ struct ContentView_Previews_Default: PreviewProvider {
          //       .preferredColorScheme(.dark)
             
         }
-        
     }
 }
 
-
+/*
 struct Menu: View {
     
     @Environment(\.presentationMode) var presentationMode
@@ -610,7 +658,7 @@ struct Menu: View {
     }
 }
 
-
+*/
 
 
 
@@ -690,96 +738,4 @@ Button(action: {
 
 
 
-struct Home : View {
-    
-    var body : some View{
-        
-        ScrollView(.vertical, showsIndicators: false) {
-            
-            VStack(spacing : 18){
-                
-                ForEach(1...6,id: \.self){i in
-                    
-                    Image("p\(i)")
-                    .resizable()
-                    .frame(height: 250)
-                    .cornerRadius(20)
-                }
-            }.padding(.top, 8)
-            .padding(.horizontal)
-        }
-    }
-}
 
-struct Orders : View {
-    
-    var body : some View{
-        
-        GeometryReader{_ in
-            
-            VStack{
-                
-                Text("Orders")
-            }
-        }
-    }
-}
-
-struct Wishlist : View {
-    
-    var body : some View{
-        
-        GeometryReader{_ in
-            
-            VStack{
-                
-                Text("Wishlist")
-            }
-        }
-    }
-}
-
-struct SavedCards : View {
-    
-    var body : some View{
-        
-        GeometryReader{_ in
-            
-            VStack{
-                
-                Text("Saved Cards")
-            }
-        }
-    }
-}
-
-struct Settings : View {
-    
-    var body : some View{
-        
-        GeometryReader{_ in
-            
-            VStack{
-                
-                Text("Settings")
-            }
-        }
-    }
-}
-
-struct Help : View {
-    
-    var body : some View{
-        
-        GeometryReader{_ in
-            
-            VStack{
-                
-                Text("Help")
-            }
-        }
-    }
-}
-
-
-var data = ["Home","Orders","Wishlist","Saved Cards","Settings","Help"]
