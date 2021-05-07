@@ -8,7 +8,13 @@
 import SwiftUI
 import MessageUI
 
-struct ContentView: View {
+
+struct MainView : View {
+    
+    @Binding var show : Bool
+    @Binding var index : String
+    
+    
     
     @State private var showingSheet = false
     
@@ -16,6 +22,8 @@ struct ContentView: View {
     
     @State var selectedTab = 0
     @State var seciliTabZorla = 0
+    
+    
     
     
     var body: some View {
@@ -86,7 +94,10 @@ struct ContentView: View {
                                         HStack {
                                             
                                             Button(action: {
-                                                self.showMenu.toggle()
+                                                withAnimation(.spring()){
+
+                                                self.show.toggle()
+                                                }
                                             }) {
                                                 Image(systemName:self.showMenu ?  "xmark": "line.horizontal.3").padding( g.size.width/12).foregroundColor(self.showMenu ? .blue : .white)
                                             }.frame(width: g.size.width, height: 50, alignment: .leading).padding(.top,20)
@@ -379,7 +390,7 @@ struct ContentView: View {
                     }.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                     
                     
-                    GeometryReader { gg in
+         /*           GeometryReader { gg in
                         HStack {
                             
                             Menu().offset(x: self.showMenu ? 0 : -UIScreen.main.bounds.width)
@@ -390,6 +401,7 @@ struct ContentView: View {
                             Spacer()
                         }
                     }.background(Color.black.opacity(self.showMenu ? 0.5  : 0).animation(.easeIn)).edgesIgnoringSafeArea(.all)
+      */
                     
                 }.actionSheet(isPresented: $showingSheet) {
                     let latitude = 40.767081
@@ -426,6 +438,106 @@ struct ContentView: View {
                 
             }.navigationBarHidden(true)
         }
+        
+    }
+}
+
+
+
+struct ContentView: View {
+    
+    @State var index = "Home"
+    @State var show = false
+    
+    
+    var body: some View {
+        
+        ZStack{
+            
+            (self.show ? Color.black.opacity(0.05) : Color.clear).edgesIgnoringSafeArea(.all)
+            
+            ZStack(alignment: .leading) {
+                
+                VStack(alignment : .leading,spacing: 25){
+                    
+                    HStack(spacing: 15){
+                        
+                        Image("pic")
+                        .resizable()
+                        .frame(width: 65, height: 65)
+                        
+                        VStack(alignment: .leading, spacing: 12) {
+                            
+                            Text("Catherine")
+                                .fontWeight(.bold)
+                            
+                            Text("New York , US")
+                        }
+                    }
+                    .padding(.bottom, 50)
+
+                    
+                    ForEach(data,id: \.self){i in
+                        
+                        Button(action: {
+                            
+                            self.index = i
+                            
+                            withAnimation(.spring()){
+                                
+                                self.show.toggle()
+                            }
+                            
+                        }) {
+                            
+                            HStack{
+                                
+                                Capsule()
+                                .fill(self.index == i ? Color.orange : Color.clear)
+                                .frame(width: 5, height: 30)
+                                
+                                Text(i)
+                                    .padding(.leading)
+                                    .foregroundColor(.black)
+                                
+                            }
+                        }
+                    }
+                    
+                    Spacer()
+                }.padding(.leading)
+                .padding(.top)
+                .scaleEffect(self.show ? 1 : 0)
+                
+                ZStack(alignment: .topTrailing) {
+                    
+                    MainView(show: self.$show,index: self.$index)
+             //       .scaleEffect(self.show ? 0.8 : 1)
+                        .offset(x: self.show ? UIScreen.main.bounds.width*0.5 : 0,y : self.show ? UIScreen.main.bounds.height*0.2 : 0)
+                    .disabled(self.show ? true : false)
+                    
+                    
+                    Button(action: {
+                        
+                        withAnimation(.spring()){
+                            
+                            self.show.toggle()
+                        }
+                        
+                    }) {
+                        
+                        Image(systemName: "xmark")
+                        .resizable()
+                        .frame(width: 15, height: 15)
+                        .foregroundColor(.black)
+                        
+                    }.padding()
+                    .opacity(self.show ? 1 : 0)
+                }
+                
+            }
+        }
+        
     }
     
 }
@@ -575,3 +687,99 @@ Button(action: {
 
 
 */
+
+
+
+struct Home : View {
+    
+    var body : some View{
+        
+        ScrollView(.vertical, showsIndicators: false) {
+            
+            VStack(spacing : 18){
+                
+                ForEach(1...6,id: \.self){i in
+                    
+                    Image("p\(i)")
+                    .resizable()
+                    .frame(height: 250)
+                    .cornerRadius(20)
+                }
+            }.padding(.top, 8)
+            .padding(.horizontal)
+        }
+    }
+}
+
+struct Orders : View {
+    
+    var body : some View{
+        
+        GeometryReader{_ in
+            
+            VStack{
+                
+                Text("Orders")
+            }
+        }
+    }
+}
+
+struct Wishlist : View {
+    
+    var body : some View{
+        
+        GeometryReader{_ in
+            
+            VStack{
+                
+                Text("Wishlist")
+            }
+        }
+    }
+}
+
+struct SavedCards : View {
+    
+    var body : some View{
+        
+        GeometryReader{_ in
+            
+            VStack{
+                
+                Text("Saved Cards")
+            }
+        }
+    }
+}
+
+struct Settings : View {
+    
+    var body : some View{
+        
+        GeometryReader{_ in
+            
+            VStack{
+                
+                Text("Settings")
+            }
+        }
+    }
+}
+
+struct Help : View {
+    
+    var body : some View{
+        
+        GeometryReader{_ in
+            
+            VStack{
+                
+                Text("Help")
+            }
+        }
+    }
+}
+
+
+var data = ["Home","Orders","Wishlist","Saved Cards","Settings","Help"]
