@@ -18,7 +18,6 @@ struct MainView : View {
     
     @State private var showingSheet = false
     
-    @State public var showMenu = false
     
     @State var selectedTab = 0
     @State var seciliTabZorla = 0
@@ -83,7 +82,7 @@ struct MainView : View {
                                     
                                     
                                 }.tabViewStyle(PageTabViewStyle()).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
-                            
+                                
                                 
                                 
                                 ZStack { //düğmeler ve ortadaki logo için
@@ -98,7 +97,7 @@ struct MainView : View {
                                                 self.show.toggle()
                                                 }
                                             }) {
-                                                Image(systemName:self.showMenu ?  "xmark": "line.horizontal.3").padding( g.size.width/12).foregroundColor(self.showMenu ? .blue : .white)
+                                                Image(systemName:"line.horizontal.3").padding( g.size.width/12).foregroundColor(.white)
                                             }.frame(width: g.size.width, height: 50, alignment: .leading).padding(.top,20)
                                             
                                         }
@@ -133,7 +132,7 @@ struct MainView : View {
                                             }
                                         }
                                         
-                                    }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .topLeading).foregroundColor(.white).font(.largeTitle).shadow(radius: 10)
+                                    }.frame(width: g.size.width, height: g.size.height, alignment: .topLeading).foregroundColor(.white).font(.largeTitle).shadow(radius: 10)
                                     
                                     Image("sitelogo").resizable().scaledToFit().padding(g.size.height/12)
                                     
@@ -144,12 +143,12 @@ struct MainView : View {
                             ZStack {
                                 
                                 
-                                Image("su").resizable().aspectRatio(contentMode: .fill).frame(width: .infinity, height: UIScreen.main.bounds.height, alignment: .center)
+                                Image("su").resizable().scaledToFill().frame(width: g.size.width, height: g.size.height, alignment: .center)
                                     .clipped()
                                 
                                 VStack {
                                     Spacer()
-                                    Text("Arıtma").font(.custom("Foral Pro", size: g.size.width/8, relativeTo: .headline)).foregroundColor(.white).frame(height: UIScreen.main.bounds.height/2, alignment: .bottom).multilineTextAlignment(.center)
+                                    Text("Arıtma").font(.custom("Foral Pro", size: g.size.width/8, relativeTo: .headline)).foregroundColor(.white).frame(height: g.size.height/2, alignment: .bottom).multilineTextAlignment(.center)
                                         .shadow(color: .black, radius: 1, x: 1, y: 1)
                                         .padding(10)
                                     NavigationLink(destination: AritmaView()) {
@@ -166,11 +165,11 @@ struct MainView : View {
                             
                             
                             ZStack {
-                                Image("kimyasallar2").resizable().aspectRatio(contentMode: .fill).frame(width: .infinity, height: UIScreen.main.bounds.height, alignment: .center)
+                                Image("kimyasallar2").resizable().scaledToFill().frame(width: g.size.width, height: g.size.height, alignment: .center)
                                     .clipped()
                                 
                                 VStack {
-                                    Text("Kimyasallar").font(.custom("Foral Pro", size: g.size.width/8, relativeTo: .headline)).foregroundColor(.white).frame(height: UIScreen.main.bounds.height/5, alignment: .bottom).multilineTextAlignment(.center)
+                                    Text("Kimyasallar").font(.custom("Foral Pro", size: g.size.width/8, relativeTo: .headline)).foregroundColor(.white).frame(height: g.size.height/5, alignment: .bottom).multilineTextAlignment(.center)
                                         .shadow(color: .black, radius: 1, x: 1, y: 1)
                                         .padding(3)
                                     
@@ -187,12 +186,12 @@ struct MainView : View {
                             
                             
                             ZStack {
-                                Image("hizmetlerimiz").resizable().aspectRatio(contentMode: .fill).frame(width: .infinity, height: UIScreen.main.bounds.height, alignment: .center)
+                                Image("hizmetlerimiz").resizable().scaledToFill().frame(width: g.size.width, height: g.size.height, alignment: .center)
                                     .clipped()
                                 
                                 VStack {
                                     Spacer()
-                                    Text("Hizmetlerimiz").font(.custom("Foral Pro", size: g.size.width/8, relativeTo: .headline)).foregroundColor(.white).frame(height: UIScreen.main.bounds.height/5, alignment: .bottom).multilineTextAlignment(.center)
+                                    Text("Hizmetlerimiz").font(.custom("Foral Pro", size: g.size.width/8, relativeTo: .headline)).foregroundColor(.white).frame(height: g.size.height/5, alignment: .bottom).multilineTextAlignment(.center)
                                         .shadow(color: .black, radius: 1, x: 1, y: 1)
                                         .padding(3)
                                     
@@ -214,12 +213,12 @@ struct MainView : View {
                             ZStack {
                                 
                                 
-                                Image("hakkimizda").resizable().aspectRatio(contentMode: .fill).frame(width: .infinity, height: UIScreen.main.bounds.height, alignment: .center)
+                                Image("hakkimizda").resizable().scaledToFill().frame(width: g.size.width, height: g.size.height, alignment: .center)
                                     .clipped()
                                 
                                 VStack {
                                    
-                                    Text("Hakkımızda").font(.custom("Foral Pro", size: g.size.width/8, relativeTo: .headline)).foregroundColor(.white).frame(height: UIScreen.main.bounds.height/4, alignment: .bottom).multilineTextAlignment(.center)
+                                    Text("Hakkımızda").font(.custom("Foral Pro", size: g.size.width/8, relativeTo: .headline)).foregroundColor(.white).frame(height: g.size.height/4, alignment: .bottom).multilineTextAlignment(.center)
                                         .shadow(color: .black, radius: 1, x: 1, y: 1)
                                         .padding(10)
                                     NavigationLink(destination: HakkimizdaView()) {
@@ -239,11 +238,11 @@ struct MainView : View {
                             
                             
                             ZStack {
-                                Image("iletisim").resizable().aspectRatio(contentMode: .fill).frame(width: .infinity, height: UIScreen.main.bounds.height, alignment: .center)
+                                Image("iletisim").resizable().scaledToFill().frame(width: g.size.width, height: g.size.height, alignment: .center)
                                     .clipped()
                                 
                                 VStack {
-                                    Text("Bize Ulaşın").font(.custom("Foral Pro", size: g.size.width/8, relativeTo: .headline)).foregroundColor(.white).frame(height: UIScreen.main.bounds.height/5, alignment: .bottom).multilineTextAlignment(.center)
+                                    Text("Bize Ulaşın").font(.custom("Foral Pro", size: g.size.width/8, relativeTo: .headline)).foregroundColor(.white).frame(height: g.size.height/5, alignment: .bottom).multilineTextAlignment(.center)
                                         .shadow(color: .black, radius: 1, x: 1, y: 1)
                                         .padding(3)
                                     
@@ -258,9 +257,9 @@ struct MainView : View {
                                                 UIApplication.shared.open(url)
                                                }) {
                                                 Image(systemName: "phone").font(.title2).padding(g.size.width/15)
-                                                    .padding(.trailing,15).frame(width: 45, height: .infinity, alignment: .center)
+                                                    .padding(.trailing,15).frame(width: 45, height: g.size.height, alignment: .center)
                                             }
-                                    }.frame(width: UIScreen.main.bounds.size.width*0.93, height: UIScreen.main.bounds.size.height/13, alignment: .center)
+                                    }.frame(width: g.size.width*0.93, height: g.size.height/13, alignment: .center)
                                         .background(Color.black.opacity(0.4))
                                         .cornerRadius(10.0)
                                         .padding(6)
@@ -274,9 +273,9 @@ struct MainView : View {
                                             UIApplication.shared.open(url)
                                            }) {
                                             Image(systemName: "phone").font(.title2).padding(g.size.width/15).padding(.trailing,15)
-                                                                                                                        .frame(width: 45, height: .infinity, alignment: .center)
+                                                .frame(width: 45, height: g.size.height, alignment: .center)
                                         }
-                                    }.frame(width: UIScreen.main.bounds.size.width*0.93, height: UIScreen.main.bounds.size.height/13, alignment: .center)
+                                    }.frame(width: g.size.width*0.93, height: g.size.height/13, alignment: .center)
                                     .background(Color.black.opacity(0.4))
                                     .cornerRadius(10.0)
                                     .padding(6)
@@ -292,10 +291,10 @@ struct MainView : View {
                                            EmailHelper.shared.sendEmail(subject: "Lütfen bir konu yazın", body: "", to: "info@kocaeliaritma.com")
                                          }) {
                                             Image(systemName: "envelope").font(.title2).padding(g.size.width/15)
-                                                .padding(.trailing,15).frame(width: 45, height: .infinity, alignment: .center)
+                                                .padding(.trailing,15).frame(width: 45, height: g.size.height, alignment: .center)
                                          }
                                         
-                                    }.frame(width: UIScreen.main.bounds.size.width*0.93, height: UIScreen.main.bounds.size.height/13, alignment: .center)
+                                    }.frame(width: g.size.width*0.93, height: g.size.height/13, alignment: .center)
                                     .background(Color.black.opacity(0.4))
                                     .cornerRadius(10.0)
                                     .padding(6)
@@ -327,12 +326,12 @@ struct MainView : View {
                                                             
                                                         }
 
-                                            }.frame(width: 45, height: .infinity, alignment: .center)
+                                            }.frame(width: 45, height: g.size.height, alignment: .center)
                                             .padding(.trailing,9)
                                                 
 
 
-                                    }.frame(width: UIScreen.main.bounds.size.width*0.93, height: UIScreen.main.bounds.size.height/7, alignment: .center)
+                                    }.frame(width: g.size.width*0.93, height: g.size.height/7, alignment: .center)
                                     .background(Color.black.opacity(0.4))
                                     .cornerRadius(10.0)
                                     
@@ -348,7 +347,7 @@ struct MainView : View {
                                     */
                                     Spacer()
                                     
-                                    Image("sitelogo").resizable().scaledToFit().frame(width: g.size.width-50, height: g.size.height/10, alignment: .center)
+                                    Image("sitelogo").resizable().scaledToFit().frame(width: abs(g.size.width-50), height: g.size.height/10, alignment: .center)
 
                                     
                                     HStack(spacing:30){
@@ -387,7 +386,10 @@ struct MainView : View {
                             
                         }
                     }.edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                    .navigationBarHidden(true) //bunu buraya koyunca üst tarafa clip etkisi gitti
+                    
+               //     .navigationBarHidden(true)
+                    
+                     //bunu buraya koyunca üst tarafa clip etkisi gitti
                     
                     
          /*           GeometryReader { gg in
@@ -403,8 +405,8 @@ struct MainView : View {
                     }.background(Color.black.opacity(self.showMenu ? 0.5  : 0).animation(.easeIn)).edgesIgnoringSafeArea(.all)
       */
                     
-                }
-                .actionSheet(isPresented: $showingSheet) {
+                }.navigationBarHidden(true)
+                 .actionSheet(isPresented: $showingSheet) {
                     let latitude = 40.767081
                     let longitude = 29.9542692
 
@@ -436,9 +438,10 @@ struct MainView : View {
                     
                     return ActionSheet(title: Text("Yol Tarifi"), message: Text("Bir uygulama seçin:"), buttons: buttons)
                     
-                }
-                
+                 }
             }
+            .cornerRadius(self.show ? 25 : 0)
+            .edgesIgnoringSafeArea(.all)
         
         
     }
@@ -451,140 +454,154 @@ struct ContentView: View {
     @State var index = 2
     @State var show = false
     
-
+    init() {
+        UIScrollView.appearance().bounces = false
+    }
     
     
     var body: some View {
         
-        NavigationView {
+      
             
-            ZStack{
+            GeometryReader   { g in
                 
-                (self.show ? Color.black.opacity(0.05) : Color.clear).edgesIgnoringSafeArea(.all)
                 
-                ZStack(alignment: .leading) {
+                NavigationView {
+                
+                ZStack{
                     
-                    VStack(alignment : .leading,spacing: 25){
+                    (self.show ? Color.white.opacity(0.9) : Color.clear).edgesIgnoringSafeArea(.all)
+                    
+                    ZStack(alignment: .leading) {
                         
-                        HStack(spacing: 15){
+                        VStack(alignment : .leading,spacing: 25){
                             
-                            Image("pic")
-                            .resizable()
-                            .frame(width: 65, height: 65)
+                            HStack(spacing: 20){
+                                
+                          //      Image("pic")
+                       //         .resizable()
+                        //        .frame(width: 65, height: 65)
+                                
+                                Image("sitelogo").resizable().scaledToFit()
+                                Spacer()
+
+                                
+                                Button(action: {
+                                    
+                                    withAnimation(.spring()){
+                                        
+                                        self.show.toggle()
+                                    }
+                                    
+                                }) {
+                                    
+                                    Image(systemName: "xmark")
+                                    .resizable()
+                                    .frame(width: 25, height: 25)
+                                    .foregroundColor(.blue)
+                                        .padding(.trailing,10)
+                                    
+                                    
+                                }
                             
-                            VStack(alignment: .leading, spacing: 12) {
                                 
-                                Text("Catherine")
-                                    .fontWeight(.bold)
                                 
-                                Text("New York , US")
+                                
+                                
+                                
                             }
-                        }
-                        .padding(.bottom, 50)
+                            .padding(.bottom, 50)
+                            .padding(.horizontal, 20)
 
+                            
+                            HStack{
+                                
+                                Capsule()
+                                    .fill(self.index == 1 ?  Color.orange : Color.blue)
+                                .frame(width: 5, height: 30)
+                                
+                                NavigationLink(
+                                    destination: AritmaView(),
+                                    label: {
+                                        Text("Arıtma")
+                                    }).simultaneousGesture(TapGesture().onEnded{
+                                        self.index = 1
+                                    })
+                            }
+                            HStack{
+                                
+                                Capsule()
+                                    .fill(self.index == 2 ?  Color.orange : Color.blue)
+                                .frame(width: 5, height: 30)
+                                
+                                NavigationLink(
+                                    destination: KimyasallarView(),
+                                    label: {
+                                        Text("Kimyasallar")
+                                    }).simultaneousGesture(TapGesture().onEnded{
+                                        self.index = 2
+                                    })
+                            }
+                            HStack{
+                                
+                                Capsule()
+                                    .fill(self.index == 3 ?  Color.orange : Color.blue)
+                                .frame(width: 5, height: 30)
+                                
+                                NavigationLink(
+                                    destination: HizmetlerimizView(),
+                                    label: {
+                                        Text("Hizmetlerimiz")
+                                    }).simultaneousGesture(TapGesture().onEnded{
+                                        self.index = 3
+                                    })
+                            }
+                            HStack{
+                                
+                                Capsule()
+                                    .fill(self.index == 4 ?  Color.orange : Color.blue)
+                                .frame(width: 5, height: 30)
+                                
+                                NavigationLink(
+                                    destination: HakkimizdaView(),
+                                    label: {
+                                        Text("Hakkımızda")
+                                    }).simultaneousGesture(TapGesture().onEnded{
+                                        self.index = 4
+                                    })
+                                
+                                
+                            }
                         
-                        HStack{
                             
-                            Capsule()
-                                .fill(self.index == 1 ?  Color.orange : Color.white)
-                            .frame(width: 5, height: 30)
+                          
                             
-                            NavigationLink(
-                                destination: AritmaView(),
-                                label: {
-                                    Text("Arıtma")
-                                }).simultaneousGesture(TapGesture().onEnded{
-                                    self.index = 1
-                                })
-                        }
-                        HStack{
-                            
-                            Capsule()
-                                .fill(self.index == 2 ?  Color.orange : Color.white)
-                            .frame(width: 5, height: 30)
-                            
-                            NavigationLink(
-                                destination: KimyasallarView(),
-                                label: {
-                                    Text("Kimyasallar")
-                                }).simultaneousGesture(TapGesture().onEnded{
-                                    self.index = 2
-                                })
-                        }
-                        HStack{
-                            
-                            Capsule()
-                                .fill(self.index == 3 ?  Color.orange : Color.white)
-                            .frame(width: 5, height: 30)
-                            
-                            NavigationLink(
-                                destination: HizmetlerimizView(),
-                                label: {
-                                    Text("Hizmetlerimiz")
-                                }).simultaneousGesture(TapGesture().onEnded{
-                                    self.index = 3
-                                })
-                        }
-                        HStack{
-                            
-                            Capsule()
-                                .fill(self.index == 4 ?  Color.orange : Color.white)
-                            .frame(width: 5, height: 30)
-                            
-                            NavigationLink(
-                                destination: HakkimizdaView(),
-                                label: {
-                                    Text("Hakkımızda")
-                                }).simultaneousGesture(TapGesture().onEnded{
-                                    self.index = 4
-                                })
-                            
-                            
-                        }
-                    
+                            Spacer()
+                        }.padding(.leading)
+                        .padding(.top)
+                        .scaleEffect(self.show ? 1 : 0.01)
                         
-                      
-                        
-                        Spacer()
-                    }.padding(.leading)
-                    .padding(.top)
-                    .scaleEffect(self.show ? 1 : 0.01)
-                    
-                    ZStack(alignment: .topTrailing) {
-                        
-                        MainView(show: self.$show)
-                 //       .scaleEffect(self.show ? 0.8 : 1)
-                            .offset(x: self.show ? UIScreen.main.bounds.width*0.5 : 0,y : self.show ? UIScreen.main.bounds.height*0.2 : 0)
-                        .disabled(self.show ? true : false)
-                        
+                        ZStack(alignment: .topTrailing) {
+                            
+                            MainView(show: self.$show)
+                     //       .scaleEffect(self.show ? 0.8 : 1)
+                                .offset(x: self.show ? g.size.width*0.5 : 0,y : self.show ? g.size.height*0.2 : 0)
+                            .disabled(self.show ? true : false)
+                             
+                            
 
-                        
-                        Button(action: {
-                            
+ 
+                        }
+                        .onTapGesture {
                             withAnimation(.spring()){
                                 
-                                self.show.toggle()
+                                self.show = false //ana sayfa gelince de çalışıyor hala diye böyle yaptım
                             }
-                            
-                        }) {
-                            
-                            Image(systemName: "xmark")
-                            .resizable()
-                            .frame(width: 15, height: 15)
-                            .foregroundColor(.black)
-                            
-                        }.padding()
-                        .opacity(self.show ? 1 : 0)
+                }
+                        
                     }
-                    .onTapGesture {
-                        withAnimation(.spring()){
-                            
-                            self.show.toggle()
-                        }
-            }
-                    
-                }.navigationBarHidden(true)
-            }
+                }
+            }.navigationBarHidden(true)
         }
         
     }
@@ -598,8 +615,12 @@ struct ContentView_Previews_Default: PreviewProvider {
         
         Group {
             ContentView().previewDevice("iPhone SE")
-        //    ContentView().previewDevice("iPhone 12 Pro Max")
+            .preferredColorScheme(.dark)
+            
+     //       ContentView().previewDevice("iPhone SE")
          //       .preferredColorScheme(.dark)
+     //       ContentView().previewDevice("iPhone 12 Pro Max")
+              
             
         }
     }

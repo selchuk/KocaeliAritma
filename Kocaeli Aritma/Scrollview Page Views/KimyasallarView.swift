@@ -9,10 +9,11 @@ import SwiftUI
 
 struct KimyasallarView: View {
     var body: some View {
+        
         ZStack {
             
             
-            Image("kimyasallar2").resizable().aspectRatio(contentMode: .fill).frame(width: .infinity, height: UIScreen.main.bounds.height, alignment: .center)
+            Image("kimyasallar2").resizable().aspectRatio(contentMode: .fill).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
                 .clipped()
             
             VStack {
@@ -56,7 +57,9 @@ struct KimyasallarView: View {
                     Spacer()
 
                 }
-        }.navigationBarTitle("Kimyasallar", displayMode: .inline)    }
+        }.navigationBarTitle("Kimyasallar", displayMode: .inline)
+        
+    }
 }
 
 struct AritmaKimyasallariView_Previews: PreviewProvider {
