@@ -19,7 +19,7 @@ struct EvselAtiksuAritmaTesisleriView: View {
                 Image("evsel/evsel5of7").resizable().scaledToFit()
                 Image("evsel/evsel6of7").resizable().scaledToFit()
                 Image("evsel/evsel7of7").resizable().scaledToFit()
-
+                
             }.padding()
         }.navigationTitle("Evsel Atıksu Arıtma Tesisleri")
     }

@@ -9,17 +9,12 @@ import SwiftUI
 
 struct HakkimizdaView: View {
     
- //   private var gridItemLayout = [GridItem(.flexible(),GridItem(.flexible()]
-    
-    
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-      
-        
         
         ScrollView{
             LazyVStack{
-                
                 
                 Image("hakkimizda1").resizable().scaledToFit()
                 
@@ -27,24 +22,26 @@ struct HakkimizdaView: View {
                 
                 Divider()
                 
-                HStack(spacing:50){
+                HStack(spacing:10){
                     VStack(spacing:10){
                         Image(systemName: "flag").font(.title2)
                         Text("16").font(.title).bold()
                         Text("Ülke").font(.title2)
-                    }
+                    }.frame(width:UIScreen.main.bounds.width/4)
+                    
                     VStack(spacing:10){
                         Image(systemName: "mappin").font(.title2)
                         Text("74").font(.title).bold()
                         Text("Şehir").font(.title2)
-                    }
+                    }.frame(width:UIScreen.main.bounds.width/4)
                     VStack(spacing:10){
                         Image(systemName: "square.and.pencil").font(.title2)
                         Text("165").font(.title).bold()
                         Text("Proje").font(.title2)
-                    }
+                    }.frame(width:UIScreen.main.bounds.width/4)
                     
-                }
+                }.padding(.vertical,15).frame(width:UIScreen.main.bounds.width)
+                
                 Divider()
                 Text("Bazı Referanslarımız").fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/).foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/).font(.title)
                 
@@ -52,22 +49,18 @@ struct HakkimizdaView: View {
                     
                     ForEach(1..<31,id: \.self) { x in
                         Image("ref/ref\(x)").resizable().aspectRatio(contentMode: .fit).padding(10)
-                    }
+                    }.background(colorScheme == .dark ? Color.white : Color.blue.opacity(0)).cornerRadius(10)
                 })
-                
-                
             }.padding()
         }.navigationBarHidden(false)
         .navigationBarTitle("Hakkımızda", displayMode: .inline)
-        
     }
-    
-    
-    
 }
+
 
 struct HakkimizdaView_Previews: PreviewProvider {
     static var previews: some View {
         HakkimizdaView()
+            .preferredColorScheme(.dark)
     }
 }

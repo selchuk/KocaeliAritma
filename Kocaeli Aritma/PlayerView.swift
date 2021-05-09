@@ -12,12 +12,11 @@ struct PlayerView: UIViewRepresentable {
     func makeUIView(context: Context) ->  UIVideoPlayer {
         return UIVideoPlayer()
     }
-    func updateUIView(_ uiView: UIVideoPlayer, context: Context) {
-        
-    }
     
+    
+    func updateUIView(_ uiView: UIVideoPlayer, context: Context) {
+    }
 }
-
 
 
 struct PlayerView_Previews: PreviewProvider {

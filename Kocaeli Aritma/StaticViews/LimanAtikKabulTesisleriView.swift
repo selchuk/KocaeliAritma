@@ -20,11 +20,10 @@ struct LimanAtikKabulTesisleriView: View {
                 Text("       MARPOL EK-I kapsamında sintine suyu Atık Kabul Tesisimizde susuzlaştırılarak, kalan atıksu tesisimizde arıtılır ve (Su Kirliliği Kontrolü Yönetmeliği) S.K.K.Y. hükümleri çerçevesinde deşarj edilir. Slaç, atık yağ ve susuzlaştırılmış sintine yağı bertaraf edilmek üzere lisanslı tesislere gönderilir.\n       MARPOL EK-IV kapsamındaki atıksu tesisimizde arıtılarak (Su Kirliliği Kontrolü Yönetmeliği) S.K.K.Y. hükümleri çerçevesinde deşarj edilir.\n       MARPOL EK-V kapsamındaki çöp atıklar bertaraf amacıyla ilgili Belediyenin katı atık deponi alanına gönderilir.")
                 Image("liman/liman2of3").resizable().scaledToFit()
                 Image("liman/liman3of3").resizable().scaledToFit()
-
-
             }.padding()
         }.navigationTitle("Liman Atık Kabul Tesisleri")    }
 }
+
 
 struct LimanAtikKabulTesisleriView_Previews: PreviewProvider {
     static var previews: some View {

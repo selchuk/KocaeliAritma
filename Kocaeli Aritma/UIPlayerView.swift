@@ -10,7 +10,6 @@ import SwiftUI
 import AVKit
 
 
-
 class UIVideoPlayer: UIView {
     
     var playerLayer = AVPlayerLayer()
@@ -24,30 +23,16 @@ class UIVideoPlayer: UIView {
             return
         }
         
-        
-  //      let player = AVPlayer(url: URL(fileURLWithPath: path))
-  //      player.isMuted = true
- //       player.play()
-        
-   //     playerLayer.player = player
         playerLayer.videoGravity = AVLayerVideoGravity(rawValue: AVLayerVideoGravity.resizeAspectFill.rawValue)
-        
-        
         let asset: AVAsset = AVAsset(url: URL(fileURLWithPath: path))
         let playerItem = AVPlayerItem(asset: asset)
         self.queuePlayer = AVQueuePlayer(playerItem: playerItem)
-        
-        
         self.playerLooper = AVPlayerLooper(player: queuePlayer, templateItem: playerItem)
-        
         playerLayer.player = queuePlayer
-        
         queuePlayer.isMuted = true
-        
         queuePlayer.play()
         print("çalmaya başladım")
         layer.addSublayer(playerLayer)
-       
     }
     
     
@@ -57,12 +42,7 @@ class UIVideoPlayer: UIView {
     }
     
     
-    
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    
 }

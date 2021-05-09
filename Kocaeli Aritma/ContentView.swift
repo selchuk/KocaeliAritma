@@ -14,9 +14,6 @@ struct MainView : View {
     
     @State private var showingSheet = false
     
-    @State var selectedTab = 0
-    @State var seciliTabZorla = 0
-    
     var body: some View {
         
         GeometryReader{ g in
@@ -79,7 +76,8 @@ struct MainView : View {
                                             }
                                         }) {
                                             Image(systemName:"line.horizontal.3").padding( g.size.width/12).foregroundColor(.white)
-                                        }.frame(width: g.size.width, height: 50, alignment: .leading).padding(.top,20)
+                                        }.frame(width: 50, height: 50, alignment: .leading).padding(.top,self.show ? 20 : UIScreen.main.bounds.height/17)//bunu yapmamın sebebi menü açılırken yeri kayıyordu sanırım navbar sorunu yüzünden
+                                        Spacer()
                                     }
                                     
                                     Spacer()
@@ -347,7 +345,7 @@ struct MainView : View {
 
 struct ContentView: View {
     
-    @State var index = 2
+    @State var index = 0
     @State var show = false
     
     init() {
@@ -371,10 +369,13 @@ struct ContentView: View {
                             HStack(spacing: 20){
                                 
                                 Image("sitelogo").resizable().scaledToFit()
+                                
                                 Spacer()
+                                
                                 Button(action: {
                                     withAnimation(.spring()){
                                         self.show.toggle()
+                                        self.index = 0
                                     }
                                 }) {
                                     Image(systemName: "xmark")
