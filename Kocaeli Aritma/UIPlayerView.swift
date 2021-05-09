@@ -19,7 +19,7 @@ class UIVideoPlayer: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        guard let path = Bundle.main.path(forResource: "cicek2", ofType:"mp4") else {
+        guard let path = Bundle.main.path(forResource: "cicek3", ofType:"mp4") else {
             debugPrint("cicek.mp4 not found")
             return
         }
@@ -43,8 +43,9 @@ class UIVideoPlayer: UIView {
         playerLayer.player = queuePlayer
         
         queuePlayer.isMuted = true
-        queuePlayer.play()
         
+        queuePlayer.play()
+        print("çalmaya başladım")
         layer.addSublayer(playerLayer)
        
     }
@@ -55,7 +56,13 @@ class UIVideoPlayer: UIView {
         playerLayer.frame = bounds
     }
     
+    
+    
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
+    
 }

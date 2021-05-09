@@ -57,7 +57,8 @@ struct HakkimizdaView: View {
                 
                 
             }.padding()
-        }.navigationTitle("Hakkımızda")
+        }.navigationBarHidden(false)
+        .navigationBarTitle("Hakkımızda", displayMode: .inline)
         
     }
     
